@@ -1,0 +1,167 @@
+/*
+
+Estilos para Registro Estatal de Turismo del Estado de Guanajuato
+Bootstrap 5.1.0
+Versión:  1.2
+Autor: ConecTI.mx
+Revisión: 20/07/2022
+
+*/
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+
+
+/*  Carrusel RET  */
+.carousel-text h1
+{
+  color: #005b96; 
+  font-weight: bold;
+  text-shadow: 0 0 6px #fff, 0 0 6px #fff, 0 0 6px #fff;
+}
+
+.carousel-text p
+{
+  text-shadow: 0 0 6px #000, 0 0 6px #000, 0 0 6px #000;
+}
+
+.ret-banner
+{
+  background-size: cover;
+  background-position: center;
+}
+
+.slide1
+{
+  background-image: url('../images/home1.jpg');
+}
+
+.slide2
+{
+  background-image: url('../images/home2.jpg');
+}
+
+.slide3
+{
+  background-image: url('../images/home3.jpg');
+}
+
+.slide4
+{
+  background-image: url('../images/home4.jpg');
+}
+
+.slide5
+{
+  background-image: url('../images/home5.jpg');
+}
+
+.slide6
+{
+  background-image: url('../images/home6.jpg');
+}
+
+.slide7
+{
+  background-image: url('../images/home7.jpg');
+}
+
+.slide8
+{
+  background-image: url('../images/home8.JPG');
+}
+
+
+.btn-ret-home {
+  font-family: 'Baloo';
+  text-align: center;
+  color:#fff;
+  background-color: #000f9f;
+  border-color: #000f9f;
+  min-width: 100%;
+  margin-top: 10px;
+}
+
+.a-ret-home
+{
+  color:  #fff !important;
+  background-color: #000f9f !important;
+  border-color: #000f9f !important;
+}
+
+.a-ret-home:hover
+{
+  color:  #fff !important;
+  background-color: #ff8200 !important;
+  border-color: #ff8200 !important;
+}
+
+
+.btn-ret-home p
+{
+  font-weight: normal !important;
+  font-size: 1rem !important;
+
+}
+
+.btn-ret-home h1
+{
+  font-weight: bolder !important;
+  font-size: 1.5rem !important;
+}
+
+
+
+/* Enlace de interés  */
+.bd-placeholder-img 
+{
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) 
+{
+  .bd-placeholder-img-lg 
+  {
+    font-size: 3.5rem;
+  }
+}
+
+.rounded-circle
+{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.links-bar1
+{
+  background-image: url('../images/logo_protocoloalba.jpg') !important;
+}
+
+.links-bar2
+{
+  background-image: url('../images/logosecturgto.png') !important;
+}
+
+.links-bar3
+{
+  background-image: url('../images/observatorio_turistico.jpg') !important;
+}
+
+.links-bar4
+{
+  background-image: url('../images/wwwguanajuato_mx.png') !important;
+}
+
+.links-bar5
+{
+  background-image: url('../images/RegistroNacionalTurismo.png') !important;
+}
+
+.links-bar6
+{
+  background-image: url('../images/logo_sectur_federal.png') !important;
+}
+

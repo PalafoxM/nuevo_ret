@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<style type=\"text/css\"> body { width: 100% GO } </style>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="{DIR}frontend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="{DIR}frontend/css/half-slider.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="{DIR}frontend/vendor/jquery/jquery.min.js"></script>
+		<script src="{DIR}frontend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    		<link rel="shortcut icon" href="<?=base_url()?>assets/images/favicon.ico" type="image/x-icon">
+
+
+		<!-- INTEGRACIÓN Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33018357-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-33018357-1');
+		</script>
+
+
+		<title> Registro Estatal de Turismo </title>
+	</head>
+
+
+	<body>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12" align="center">
+						<!-- MENU DE OPCIONES | FRONTEND RET -->
+						<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="color:#000; background-color:blue; border-radius: 0px; margin: 10;"></nav>
+					</div>
+				</div>
+
+				<!-- FORMULARIO | FRONTEND RET -->
+				<div class="row">
+					<div>
+					<div class="col-md-12"  align="center"><br><br>
+						<div id="ff-compose"></div>
+						<!--<script async defer src="https://formfacade.com/include/109742698001181905449/form/1FAIpQLSevK6ZimzE0QZtihcarydFrQAov1QYsovvg8NahTWhedq8w4Q/wordpress.js?div=ff-compose"></script>-->
+						<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevK6ZimzE0QZtihcarydFrQAov1QYsovvg8NahTWhedq8w4Q/viewform?embedded=true" width="1240" height="2610" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>					</div>
+					</div>
+				</div>
+
+				<!-- PIE DE PAGINA | FRONTEND RET -->
+				<footer class="py-5 text-center" style="background-color:#e6e6e6">
+					<div class="row"><br>
+						<img src="https://sectur.guanajuato.gob.mx/wp-content/images/IgualdadLaboral.png" width="100" height="" alt=""><br><br>
+
+						<p class="m-0 text-center address" style="font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif; font-size:16px; color:#000"> 
+							<b>Secretaría de Turismo</b> <br>
+						</p>
+
+						<p class="m-0 text-center address" style="font-family: Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif; font-size:12px; color:#000"> 
+							Carretera de cuota Silao-Guanajuato Km. 3.8 (dentro de las instalaciones de Parque Guanajuato Bicentenario) <br>
+							C.P. 36270 Silao, Guanajuato <br>
+							Tel. (472) 103 99 00 
+
+							<a href="https://www.facebook.com/Sectur.Guanajuato" target="_blank"><img src="<?php echo base_url(); ?>frontend/imgs/home/facebook-i.png" width="20" height="" alt=""></a>
+							<a href="https://twitter.com/SECTURGTO" target="_blank"><img src="<?php echo base_url(); ?>frontend/imgs/home/twitter-i.png" width="20" height="" alt=""></a><br><br>
+
+							&copy; <label id="fecha"></label> <script type="text/javascript"> var year = (new Date).getFullYear(); $(document).ready(function() { $("#fecha").text( year );}); </script> Gobierno del Estado de Guanajuato, Derechos Reservados. <br>
+							<a href="{DIR}informativos/aviso_legal.pdf" target="_blank" style="color:#000"><b> Aviso Legal </b></a>
+						</p>
+					</div>		
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

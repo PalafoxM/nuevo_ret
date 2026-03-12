@@ -1,0 +1,249 @@
+/*
+
+Estilos para Registro Estatal de Turismo del Estado de Guanajuato
+Bootstrap 5.1.0
+Versión:  1.1
+Autor: ConecTI.mx
+Revisión: 10/05/2022
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova'), local('Proxima Nova'), 
+         url(font/Proxima-Nova-Reg.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: local('Proxima Nova Light'), local('Proxima Nova Light'), 
+         url(font/Proxima-Nova-Light.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: local('Proxima Nova Bold'), local('Proxima Nova Bold'), 
+         url(font/Proxima-Nova-Bold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova XBold';
+  src: local('Proxima Nova XBold'), local('Proxima Nova XBold'), 
+         url(font/Proxima-Nova-Xbold.otf) format('opentype');
+}
+
+body {
+  color: #5a5a5a;
+  font-family: Proxima Nova Bold, sans-serif !important;
+}
+
+.container_ret {
+  max-width: 1600px;
+  width: 100%;
+  padding: 0px 15px 0px 15px;
+  margin-right:auto;
+  margin-left:auto
+
+}
+
+/* Títulos  */
+.ret-titulo
+{
+  font-family: 'Baloo';
+  font-size: 2rem;
+  color: #ff8200;
+}
+
+.ret-titulo-panel
+{
+  font-family: 'Baloo';
+  font-size: 2.5rem;
+  color: #000ea7;
+}
+
+/*  Cabecera Enlaces Rápidos  */
+.border-header
+{
+  background-color: #e4ecfa;
+  /*background-image: linear-gradient(to left, rgb(252,98,32) , #7A429E,#083FB0, #001F8A);*/
+  color: #1266ff;
+  border: none !important;
+  padding: 0.5rem !important;
+  font-size: 1rem !important;
+}
+
+.border-header a
+{
+  color: #1266ff;
+}
+
+.border-header a:hover
+{
+  color: #000f9f !important;
+  text-decoration: underline;
+}
+
+.border-header a:visited
+{
+  color: #1266ff;
+}
+
+.acceso-btn a
+{
+  color: #fff !important;
+}
+
+.acceso-btn a:hover
+{
+  color: #fff !important;
+  text-decoration: underline !important;
+}
+
+.acceso-btn a:visited
+{
+  color: #fff !important;
+}
+
+/*  Cabecera Enlaces Rápidos Privado  */
+.border-header-p
+{
+  background-color: #e4ecfa;
+  color: #000f9f;
+  border: none !important;
+  padding: 0.5rem !important;
+  font-size: 1rem !important;
+}
+
+.border-header-p a
+{
+  color: #000f9f;
+}
+
+.border-header-p a:hover
+{
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+.border-header-p a:visited
+{
+  color: #000f9f;
+}
+
+/*  Cabecera Menú  */
+.header-main
+{
+  background-color: #fff;
+  /*background-image: linear-gradient(to left, rgb(252,98,32) , #7A429E,#083FB0, #001F8A);*/
+  color: #000f9f;  
+  border: none !important;
+  font-size: 1.1rem;
+  padding: 1.5rem;
+}
+
+.header-main img
+{
+  max-width: 100px;
+}
+
+.menu-link
+{
+  color: #000f9f !important;
+}
+
+.active
+{
+  color: #0159bc !important;
+  background-color: #fff !important;
+}
+
+/*  Cabecera Menú Privado */
+.header-main-p
+{
+  background-color: #0159bc;
+  /*background-image: linear-gradient(to left, rgb(252,98,32) , #7A429E,#083FB0, #001F8A);*/
+  color: #fff;  
+  border: none !important;
+  font-size: 1.1rem;
+  padding: 1.5rem;
+}
+
+.header-main-p img
+{
+  max-width: 200px;
+}
+
+.menu-link-p
+{
+  color: #fff !important;
+}
+
+.active-p
+{
+  color: #0159bc !important;
+  background-color: #fff !important;
+}
+
+/*.mb-4
+{
+   margin-bottom: 0rem !important;
+}*/
+
+/*  Menú Desplegable  */
+.ret-dropdown
+{
+  background-color: #0159bc !important;
+  color: #fff !important;
+}
+
+.ret-dropdown a
+{
+  color: #fff !important;
+}
+
+.ret-dropdown a:hover 
+{
+  color: #fff !important;
+  background-color:#000f9f;
+  text-decoration: underline !important;
+
+}
+
+
+/* Destacado  */
+.ret-destacado
+{
+  font-family: 'Baloo';
+  font-size: 1rem;
+  color: #000f9f;
+}
+
+.ret-destacado a
+{
+  font-family: 'Baloo';
+  font-size: 1rem;
+  color: #000f9f;
+}
+
+.ret-destacado a:hover
+{
+  font-family: 'Baloo';
+  font-size: 1rem;
+  color: #000f9f;
+  text-decoration: underline !important;
+}
+
+.ret-destacado-titulo
+{
+  font-family: 'Baloo';
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #000f9f;
+  color: #fff !important;
+}
+
+
+/* Marketing  */
+.marketing
+{
+  padding-top: 30px;
+}

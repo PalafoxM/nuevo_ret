@@ -1,0 +1,8 @@
+writable/
+respaldowritable/
+.git_backup*
+
+# Archivos comprimidos y backups
+*.tar.gz
+*.zip
+*.log

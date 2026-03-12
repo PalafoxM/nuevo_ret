@@ -1,0 +1,34 @@
+body {margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px; font-family:Arial, Helvetica, sans-serif;}
+.bgCedula{background:url(../imgs/cedula/cedula_02.jpg); vertical-align:top; height:500px;  }
+
+/*@font-face {
+  font-family: "Titillium";
+  src: url(Titillium.ttf) format("truetype");
+  src: url('/mifuenteembebida.otf')   format('opentype');
+
+}
+
+h1 { font-family: "Kimberley", sans-serif; }
+
+*/
+.azul12{ font-weight:bold; color:#0f406d; font-size:20px;}
+.azul14{ font-weight:bold; color:#0f406d; font-size:22px;}
+.azul16{ font-weight:bold; color:#0f406d; font-size:24px;}
+.azul20{ font-weight:bold; color:#0f406d; font-size:24px;}
+.azul22{ font-weight:bold; color:#0f406d; font-size:28px;}
+.azul26{ font-weight:bold; color:#0f406d; font-size:36px;}
+
+.azul14Reg{ color:#0f406d; font-size:20px;}
+
+.azulClaro{ font-weight:bold; color:#26b6e7; font-size:22px;}
+
+hr{ background:#26b6e7; height:2px; width:50%; border:none}
+
+
+.bgTR{ background:url(../imgs/cedula/bgInput.png); height:20px;}
+.labelMini{ font-weight:bold; color:#0f406d; font-size:11px; padding-left:10px;}
+.labelMini2{ font-weight:bold; color:#0f406d; font-size:16px; padding:10px 0 10px 10px;}
+.leyendaMini{ color:#0f406d; font-size:9px; text-align:center; padding-top:5px}
+
+.titMini{ font-weight:bold; color:#0f406d; font-size:13px; }
+.subtitMini{ font-weight:bold; color:#26b6e7; font-size:9px; }

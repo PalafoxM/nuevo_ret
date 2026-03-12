@@ -1,0 +1,72 @@
+/*
+
+Estilos para Registro Estatal de Turismo del Estado de Guanajuato
+Bootstrap 5.1.0
+Versión:  1.1
+Autor: ConecTI.mx
+Revisión: 30/11/2021
+
+*/
+
+/* Pie de página  */
+.ret-footer
+{
+  background-color: #e4ecfa;
+  color: #000ea7;
+  font-size: medium;
+  text-align: left !important;
+}
+
+.ret-footer-container
+{
+  max-width: 1600px;
+  width: 100%;
+  margin-right:auto;
+  margin-left:auto;
+  padding: 0px 15px 0px 15px;
+}
+
+.ret-footer img
+{
+  max-height: 55px;
+}
+
+.ret-footer label
+{
+  color: #000ea7;
+  font-weight: 200;
+  font-size: medium;
+  width: 100%;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.ret-footer h4
+{
+  font-family: 'Baloo';
+  font-size: 1.2rem;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+
+.ret-footer b
+{
+  font-size: 16px;
+}
+
+.ret-footer a
+{
+  color: #000ea7 !important;
+  font-size: medium !important;
+  text-decoration: none !important;
+}
+
+.ret-footer a:hover
+{
+  text-decoration: underline !important;
+}
+
+.copyright
+{
+  text-align: center;
+}

@@ -1,0 +1,140 @@
+/*
+
+Estilos para Registro Estatal de Turismo del Estado de Guanajuato
+Bootstrap 5.1.0
+Versión:  1.0
+Autor: ConecTI.mx
+Revisión: 30/11/2021
+
+*/
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova'), local('Proxima Nova'), 
+         url(font/Proxima-Nova-Reg.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: local('Proxima Nova Light'), local('Proxima Nova Light'), 
+         url(font/Proxima-Nova-Light.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: local('Proxima Nova Bold'), local('Proxima Nova Bold'), 
+         url(font/Proxima-Nova-Bold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Proxima Nova XBold';
+  src: local('Proxima Nova XBold'), local('Proxima Nova XBold'), 
+         url(font/Proxima-Nova-Xbold.otf) format('opentype');
+}
+
+body {
+  color: #5a5a5a;
+  font-family: Proxima Nova Bold, sans-serif !important;
+}
+
+/*  Cabecera Enlaces Rápidos  */
+.border-header
+{
+  background-color: #000f9f;
+  /*background-image: linear-gradient(to left, rgb(252,98,32) , #7A429E,#083FB0, #001F8A);*/
+  color: #fff;
+  border: none !important;
+  padding: 0.5rem !important;
+  font-size: 1rem !important;
+}
+
+.border-header a
+{
+  color: #fff;
+}
+
+.border-header a:hover
+{
+  color: #000f9f !important;
+  text-decoration: underline;
+}
+
+.border-header a:visited
+{
+  color: #fff;
+}
+
+/*  Cabecera Enlaces Rápidos Privado  */
+.border-header-p
+{
+  background-color: #fff;
+  color: #000f9f;
+  border: none !important;
+  padding: 0.5rem !important;
+  font-size: 1rem !important;
+}
+
+.border-header-p a
+{
+  color: #000f9f;
+}
+
+.border-header-p a:hover
+{
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+.border-header-p a:visited
+{
+  color: #000f9f;
+}
+
+/*  Cabecera Menú  */
+.header-main
+{
+  background-color: #0159bc;
+  /*background-image: linear-gradient(to left, rgb(252,98,32) , #7A429E,#083FB0, #001F8A);*/
+  color: #fff;  
+  border: none !important;
+  font-size: 1.1rem;
+  padding: 1.5rem;
+}
+
+.header-main img
+{
+  max-width: 200px;
+}
+
+.menu-link
+{
+  color: #fff !important;
+}
+
+.active
+{
+  color: #0159bc !important;
+  background-color: #fff !important;
+}
+
+/*.mb-4
+{
+   margin-bottom: 0rem !important;
+}*/
+
+/*  Menú Desplegable  */
+.ret-dropdown
+{
+  background-color: #0159bc !important;
+  color: #fff !important;
+}
+
+.ret-dropdown a
+{
+  color: #fff !important;
+}
+
+.ret-dropdown a:hover 
+{
+  color: #fff !important;
+  background-color:#000f9f;
+  text-decoration: underline !important;
+
+}

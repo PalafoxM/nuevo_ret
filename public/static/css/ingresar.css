@@ -1,0 +1,126 @@
+/*
+
+Estilos para Registro Estatal de Turismo del Estado de Guanajuato
+Bootstrap 5.1.0
+Versión:  1.0
+Autor: ConecTI.mx
+Revisión: 30/11/2021
+
+*/
+
+/*  Cambio de contraseña  */
+
+.form-password {
+  width: 100%;
+  padding: 15px;
+  min-height: 250px !important;
+}
+
+.form-password .checkbox {
+  font-weight: 400;
+}
+
+.form-password .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-password a
+{
+  color: #ff6600;
+}
+
+.form-password form {
+  margin: auto !important;
+  
+}
+
+.form-password input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#pass_form label.error {
+  padding:  -1rem .75rem !important;
+}
+
+
+/*  Ingresar al RET  */
+.div-form {
+  background-color: #fff;
+}
+
+.form-body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #fff;
+}
+
+.form-signin {
+  width: 100%;
+  padding: 15px;
+  min-height: 500px !important;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin a
+{
+  color: #ff6600;
+}
+
+.form-signin form {
+  margin: auto !important;
+  
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn-goog {
+  background-color: #fff !important;
+  background-image: url('../images/google-logo_alt.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  color: #000 !important;
+  text-align: left;
+  text-shadow: 0 0 6px #fff, 0 0 6px #000, 0 0 6px #fff;
+}
+
+.btn-msft {
+  background-color: #fff !important;
+  background-image: url('../images/msft-logo_alt.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  color: #000 !important;
+  text-align: left;
+  text-shadow: 0 0 6px #fff, 0 0 6px #000, 0 0 6px #fff;
+}
+
+.btn-fcbk {
+  background-color: #fff !important;
+  background-image: url('../images/facebook-logo_alt.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  color: #000 !important;
+  text-align: left;
+  text-shadow: 0 0 6px #fff, 0 0 6px #000, 0 0 6px #fff;
+}
