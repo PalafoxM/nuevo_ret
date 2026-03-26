@@ -138,13 +138,13 @@
                 $email = \Config\Services::email();
 
                 $config['protocol']         =   PROTOCOL_GMAIL;
-                $config['SMTPHost']         =   SMTPHOST_GMAIL;
+                $config['SMTPHost']         =   preg_replace('/^ssl:\/\//', '', SMTPHOST_GMAIL);
                 $config['SMTPPort']         =   '465';
                 $config['SMTPTimeout']      =   '7';
                 $config['SMTPUser']         =   'ret@guanajuato.gob.mx';
                 $config['SMTPPass']         =   'rwqxovrdtrzacntx';
                 $config['charset']          =   'utf-8';
-                $config['SMTPCrypto']       =   '';
+                $config['SMTPCrypto']       =   'ssl';
                 $config['newline']          =   "\r\n";
                 $config['CRLF']             =   "\r\n";
                 $config['mailType']         =   'html';
@@ -167,6 +167,13 @@
                 $email->setMessage($message);
 
                 $success = $email->send();
+
+                if(!$success)
+                    log_message('error', 'No se pudo enviar correo "{subject}" a "{recipient}". {debug}', [
+                        'subject'   =>  $subject,
+                        'recipient' =>  $recipient_to,
+                        'debug'     =>  trim(strip_tags($email->printDebugger(['headers']))),
+                    ]);
 
                 return $success;
         }
@@ -267,4 +274,3 @@
                 return false;
         }
     }
-

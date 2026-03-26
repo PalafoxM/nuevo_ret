@@ -519,7 +519,7 @@ img#loading {
     left: 45%;
     top: 30%;
     width: 250px;
-
+    display: none;
 }
 
 .overlay{
@@ -530,6 +530,12 @@ img#loading {
   height: 100%;
   z-index: 1050;
   background-color: rgba(0,0,0,0.5); /*dim the background*/
+  display: none;
+}
+
+html.ret-admin-loading img#loading,
+html.ret-admin-loading .overlay {
+    display: block;
 }
 
 .btn span.glyphicon {               

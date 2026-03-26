@@ -20,8 +20,7 @@ class Inicio extends BaseController
                                                 BASE_URL.STATIC_CSS.'bootstrap.min.5.1.0.css',
                                                 BASE_URL.STATIC_CSS.'template.css?v=1.1.2',
                                                 BASE_URL.STATIC_CSS.'header.css',
-                                                BASE_URL.STATIC_CSS.'carousel.css',
-                                                BASE_URL.STATIC_CSS.'inicio.css?v=1.2',
+                                                BASE_URL.STATIC_CSS.'inicio.css?v=2.0',
                                                 BASE_URL.STATIC_CSS.'footer.css?v=1.1',
                                                 BASE_URL.STATIC_CSS.'bootstrap-icons.css',                                          
                                             );

@@ -1339,7 +1339,42 @@ class Paneladm extends BaseController {
 			$o_function 		= 	$this->session->getFlashdata('o_function');
 			$valido 			=	false;
 
+			$reportesDir		=	ROOTPATH.'writable/reportes/';
+			$plantillaDir		=	$reportesDir.'plantilla/';
+
+			if(! is_dir($reportesDir))
+				@mkdir($reportesDir, 0777, true);
+
+			if(! is_dir($plantillaDir))
+				@mkdir($plantillaDir, 0777, true);
+
 			$template 			=	ROOTPATH.'writable/reportes/plantilla/'.$_tipo.'.xlsx';
+
+			$loadTemplateOrCreate = static function($template, array $headers = []) {
+				if(is_file($template))
+				{
+					$spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($template);
+					$worksheet = $spreadsheet->getActiveSheet();
+				}
+				else
+				{
+					$spreadsheet = new Spreadsheet();
+					$worksheet = $spreadsheet->getActiveSheet();
+
+					if(count($headers) > 0)
+					{
+						$column = 'A';
+						foreach($headers as $header)
+						{
+							$worksheet->setCellValue($column.'1', $header);
+							$worksheet->getStyle($column.'1')->getFont()->setBold(true);
+							$column++;
+						}
+					}
+				}
+
+				return [$spreadsheet, $worksheet];
+			};
 			
 			switch($_tipo)
 			{
@@ -1448,9 +1483,21 @@ class Paneladm extends BaseController {
 				break;
 				case 'apphospedaje':
 
-					$spreadsheet 		=	\PhpOffice\PhpSpreadsheet\IOFactory::load($template);
-					$worksheet 			=	$spreadsheet->getActiveSheet();
-					$fila				=	2;
+					[$spreadsheet, $worksheet] = $loadTemplateOrCreate($template, [
+						'CLAVE RET',
+						'VISIBLE',
+						'CONCLUIDO',
+						'APROBADO',
+						'GIRO',
+						'SUBRUBRO',
+						'NOMBRE COMERCIAL',
+						'MUNICIPIO ID',
+						'MUNICIPIO',
+						'CATEGORIA',
+						'TIPO',
+						'FECHA REGISTRO',
+					]);
+					$fila				=	is_file($template) ? 2 : 2;
 
 					$data				= 	$this->admin_model->get_data('vw_usr_datos', 'vw_usr_datos.subrubro_descripcion, vw_usr_datos.dg_fecha_registro, vw_usr_datos.clave, vw_usr_datos.visible, vw_usr_datos.concluido, vw_usr_datos.aprobado, vw_usr_datos.g_giro, vw_usr_datos.nombre_comercial, vw_usr_datos.municipio, vw_usr_datos.municipio_nombre, ret_frm_hospedaje.categoria, ret_frm_hospedaje.tipo, vw_usr_datos.fecha', ['visible'		=>	1, 
 												'concluido'		=>	1, 

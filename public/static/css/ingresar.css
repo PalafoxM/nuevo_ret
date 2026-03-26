@@ -2,13 +2,9 @@
 
 Estilos para Registro Estatal de Turismo del Estado de Guanajuato
 Bootstrap 5.1.0
-Versión:  1.0
-Autor: ConecTI.mx
-Revisión: 30/11/2021
+Version:  2.0
 
 */
-
-/*  Cambio de contraseña  */
 
 .form-password {
   width: 100%;
@@ -24,14 +20,12 @@ Revisión: 30/11/2021
   z-index: 2;
 }
 
-.form-password a
-{
+.form-password a {
   color: #ff6600;
 }
 
 .form-password form {
   margin: auto !important;
-  
 }
 
 .form-password input[type="password"] {
@@ -41,27 +35,29 @@ Revisión: 30/11/2021
 }
 
 #pass_form label.error {
-  padding:  -1rem .75rem !important;
+  padding: -1rem .75rem !important;
 }
 
-
-/*  Ingresar al RET  */
 .div-form {
   background-color: #fff;
 }
 
 .form-body {
-  height: 100%;
+  min-height: 100%;
   display: flex;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #fff;
+  justify-content: center;
+  padding: 48px 20px 56px;
+  background:
+    radial-gradient(circle at top left, rgba(13, 110, 253, 0.16), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(255, 130, 0, 0.18), transparent 30%),
+    linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
 }
 
 .form-signin {
   width: 100%;
-  padding: 15px;
+  max-width: 520px;
+  padding: 24px;
   min-height: 500px !important;
 }
 
@@ -73,14 +69,17 @@ Revisión: 30/11/2021
   z-index: 2;
 }
 
-.form-signin a
-{
+.form-signin a {
   color: #ff6600;
 }
 
 .form-signin form {
   margin: auto !important;
-  
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(5, 38, 89, 0.08);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(11, 35, 71, 0.12);
+  padding: 32px 28px;
 }
 
 .form-signin input[type="email"] {
@@ -95,32 +94,695 @@ Revisión: 30/11/2021
   border-top-right-radius: 0;
 }
 
-.btn-goog {
+.btn-goog,
+.btn-msft,
+.btn-fcbk {
   background-color: #fff !important;
-  background-image: url('../images/google-logo_alt.png');
-  background-position: right;
+  background-position: right 16px center;
   background-repeat: no-repeat;
-  color: #000 !important;
+  color: #1b2433 !important;
   text-align: left;
-  text-shadow: 0 0 6px #fff, 0 0 6px #000, 0 0 6px #fff;
+  border: 1px solid #d8e1ec !important;
+}
+
+.btn-goog {
+  background-image: url('../images/google-logo_alt.png');
 }
 
 .btn-msft {
-  background-color: #fff !important;
   background-image: url('../images/msft-logo_alt.png');
-  background-position: right;
-  background-repeat: no-repeat;
-  color: #000 !important;
-  text-align: left;
-  text-shadow: 0 0 6px #fff, 0 0 6px #000, 0 0 6px #fff;
 }
 
 .btn-fcbk {
-  background-color: #fff !important;
   background-image: url('../images/facebook-logo_alt.png');
-  background-position: right;
-  background-repeat: no-repeat;
-  color: #000 !important;
-  text-align: left;
-  text-shadow: 0 0 6px #fff, 0 0 6px #000, 0 0 6px #fff;
+}
+
+.signup-shell {
+  padding: 32px 20px 72px;
+  background:
+    linear-gradient(135deg, #f5f8fd 0%, #eef5ff 42%, #fff8ef 100%);
+}
+
+.signup-hero {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 470px);
+  gap: 36px;
+  align-items: stretch;
+}
+
+.signup-copy {
+  position: relative;
+  overflow: hidden;
+  padding: 42px;
+  border-radius: 32px;
+  background:
+    linear-gradient(145deg, rgba(0, 30, 92, 0.98), rgba(12, 89, 188, 0.92)),
+    linear-gradient(180deg, #0b2e67 0%, #0f57a8 100%);
+  color: #fff;
+  box-shadow: 0 28px 80px rgba(8, 36, 78, 0.22);
+}
+
+.signup-copy::before,
+.signup-copy::after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.signup-copy::before {
+  width: 320px;
+  height: 320px;
+  top: -130px;
+  right: -120px;
+  background: radial-gradient(circle, #4bc3ff 0%, transparent 70%);
+}
+
+.signup-copy::after {
+  width: 280px;
+  height: 280px;
+  bottom: -110px;
+  left: -110px;
+  background: radial-gradient(circle, #ffb347 0%, transparent 72%);
+}
+
+.signup-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #dbeaff;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.signup-title {
+  margin: 22px 0 16px;
+  font-family: 'Baloo', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4.3rem);
+  line-height: 1.02;
+  color: #fff4dd;
+}
+
+.signup-lead {
+  max-width: 680px;
+  margin: 0 0 30px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.signup-highlights {
+  display: grid;
+  gap: 16px;
+}
+
+.signup-highlight-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.signup-highlight-card h2 {
+  margin: 4px 0 6px;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
+
+.signup-highlight-card p {
+  margin: 0;
+  font-family: 'Proxima Nova Light', sans-serif;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.signup-highlight-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffffff 0%, #d8ebff 100%);
+  color: #0f57a8;
+  font-size: 1.4rem;
+}
+
+.signup-panel {
+  display: flex;
+  align-items: center;
+}
+
+.signup-card {
+  width: 100%;
+  padding: 34px 32px 30px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(14, 69, 145, 0.1);
+  box-shadow: 0 24px 80px rgba(17, 45, 89, 0.14);
+}
+
+.signup-card-badge {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #e9f2ff;
+  color: #0b4ea2;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.signup-card-title {
+  margin-bottom: 10px;
+}
+
+.signup-card-copy {
+  margin-bottom: 24px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-size: 1rem;
+  color: #53627a;
+}
+
+.signup-alert {
+  border: none;
+  border-radius: 18px;
+  background: #fff3d8;
+  color: #7c4b00;
+}
+
+.signup-form .form-floating + .form-floating {
+  margin-top: 14px;
+}
+
+.signup-form .form-control {
+  height: calc(3.8rem + 2px);
+  border: 1px solid #d6e0ec;
+  border-radius: 18px;
+  padding-top: 1.5rem;
+  background-color: #fbfdff;
+  box-shadow: none;
+}
+
+.signup-form .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.22rem rgba(13, 110, 253, 0.14);
+}
+
+.signup-form .form-floating > label {
+  padding: 1rem 1rem;
+  color: #66758f;
+}
+
+.signup-inline-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0 20px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: #eef6ff;
+  color: #0f57a8;
+  font-family: 'Proxima Nova Light', sans-serif;
+}
+
+.signup-primary-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 18px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ff8a00 0%, #ff6a00 100%);
+  color: #fff;
+  font-size: 1.05rem;
+  box-shadow: 0 16px 32px rgba(255, 122, 0, 0.26);
+}
+
+.signup-primary-btn:hover,
+.signup-primary-btn:focus {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.signup-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 24px 0 18px;
+  color: #8290a9;
+  font-family: 'Proxima Nova Light', sans-serif;
+}
+
+.signup-divider::before,
+.signup-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #dde6f2;
+}
+
+.signup-social-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.signup-social-btn {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 16px;
+  padding: 12px 16px;
+  font-size: 0.98rem;
+  box-shadow: 0 10px 24px rgba(16, 41, 82, 0.06);
+}
+
+.signup-secondary-link {
+  display: inline-flex;
+  margin-top: 22px;
+  color: #0f57a8 !important;
+  font-size: 0.98rem;
+}
+
+.signup-secondary-link:hover {
+  color: #08376b !important;
+}
+
+@media (max-width: 991.98px) {
+  .signup-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-copy,
+  .signup-card {
+    padding: 28px 24px;
+  }
+
+  .signup-title {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .signup-shell {
+    padding: 20px 14px 48px;
+  }
+
+  .signup-copy,
+  .signup-card {
+    border-radius: 24px;
+    padding: 24px 18px;
+  }
+
+  .signup-title {
+    font-size: 2.1rem;
+  }
+
+  .signup-highlight-card {
+    grid-template-columns: 48px 1fr;
+    padding: 16px;
+  }
+
+  .signup-highlight-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+}
+
+.signin-shell {
+  padding: 32px 20px 72px;
+  background:
+    radial-gradient(circle at top left, rgba(13, 110, 253, 0.16), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255, 138, 0, 0.18), transparent 24%),
+    linear-gradient(135deg, #f5f8fd 0%, #eef5ff 42%, #fff8ef 100%);
+}
+
+.signin-hero {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 470px);
+  gap: 36px;
+  align-items: stretch;
+}
+
+.signin-copy {
+  position: relative;
+  overflow: hidden;
+  padding: 42px;
+  border-radius: 32px;
+  background:
+    linear-gradient(145deg, rgba(0, 30, 92, 0.98), rgba(12, 89, 188, 0.92)),
+    linear-gradient(180deg, #0b2e67 0%, #0f57a8 100%);
+  color: #fff;
+  box-shadow: 0 28px 80px rgba(8, 36, 78, 0.22);
+}
+
+.signin-copy::before,
+.signin-copy::after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.signin-copy::before {
+  width: 320px;
+  height: 320px;
+  top: -130px;
+  right: -120px;
+  background: radial-gradient(circle, #4bc3ff 0%, transparent 70%);
+}
+
+.signin-copy::after {
+  width: 280px;
+  height: 280px;
+  bottom: -110px;
+  left: -110px;
+  background: radial-gradient(circle, #ffb347 0%, transparent 72%);
+}
+
+.signin-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #dbeaff;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.signin-title {
+  margin: 22px 0 16px;
+  font-family: 'Baloo', sans-serif;
+  font-size: clamp(2.3rem, 4.8vw, 4.1rem);
+  line-height: 1.02;
+  color: #fff4dd;
+}
+
+.signin-lead {
+  max-width: 680px;
+  margin: 0 0 30px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-size: 1.12rem;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.signin-feature-list {
+  display: grid;
+  gap: 16px;
+}
+
+.signin-feature {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.signin-feature h2 {
+  margin: 4px 0 6px;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
+
+.signin-feature p {
+  margin: 0;
+  font-family: 'Proxima Nova Light', sans-serif;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.signin-feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffffff 0%, #d8ebff 100%);
+  color: #0f57a8;
+  font-size: 1.4rem;
+}
+
+.signin-panel {
+  display: flex;
+  align-items: center;
+}
+
+.signin-card {
+  width: 100%;
+  padding: 34px 32px 30px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(14, 69, 145, 0.1);
+  box-shadow: 0 24px 80px rgba(17, 45, 89, 0.14);
+}
+
+.signin-badge {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #e9f2ff;
+  color: #0b4ea2;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.signin-card-title {
+  margin-bottom: 10px;
+}
+
+.signin-card-copy {
+  margin-bottom: 24px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  font-size: 1rem;
+  color: #53627a;
+}
+
+.signin-form .form-floating + .form-floating {
+  margin-top: 14px;
+}
+
+.signin-form .form-control {
+  height: calc(3.8rem + 2px);
+  border: 1px solid #d6e0ec;
+  border-radius: 18px;
+  padding-top: 1.5rem;
+  background-color: #fbfdff;
+  box-shadow: none;
+}
+
+.signin-form .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.22rem rgba(13, 110, 253, 0.14);
+}
+
+.signin-form .form-floating > label {
+  padding: 1rem 1rem;
+  color: #66758f;
+}
+
+.signin-primary-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0f6bff 0%, #215be5 100%);
+  color: #fff;
+  font-size: 1.05rem;
+  box-shadow: 0 16px 32px rgba(33, 91, 229, 0.24);
+}
+
+.signin-primary-btn:hover,
+.signin-primary-btn:focus {
+  color: #fff;
+}
+
+.signin-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 24px 0 18px;
+  color: #8290a9;
+  font-family: 'Proxima Nova Light', sans-serif;
+}
+
+.signin-divider::before,
+.signin-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #dde6f2;
+}
+
+.signin-alt-copy {
+  margin-bottom: 14px;
+  font-family: 'Proxima Nova Light', sans-serif;
+  color: #5e6b80;
+}
+
+.signin-social-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.signin-social-btn {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 16px;
+  padding: 12px 16px;
+  font-size: 0.98rem;
+  box-shadow: 0 10px 24px rgba(16, 41, 82, 0.06);
+}
+
+.signin-recovery-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff7ed 0%, #fff1df 100%);
+  border: 1px solid rgba(255, 138, 0, 0.18);
+}
+
+.signin-recovery-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #b86100;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.signin-recovery-copy {
+  margin: 0;
+  color: #7f5320;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.signin-text-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ff8a00 0%, #ff6a00 100%);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 14px 28px rgba(255, 122, 0, 0.2);
+  white-space: nowrap;
+}
+
+.signin-text-action:hover,
+.signin-text-action:focus {
+  color: #fff;
+  background: linear-gradient(135deg, #f27d00 0%, #e45e00 100%);
+}
+
+.signin-secondary-link {
+  display: inline-flex;
+  margin-top: 22px;
+  color: #0f57a8 !important;
+  font-size: 0.98rem;
+}
+
+.signin-secondary-link:hover {
+  color: #08376b !important;
+}
+
+@media (max-width: 991.98px) {
+  .signin-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .signin-copy,
+  .signin-card {
+    padding: 28px 24px;
+  }
+
+  .signin-title {
+    font-size: 2.6rem;
+  }
+
+  .signin-recovery-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .signin-text-action {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .signin-shell {
+    padding: 20px 14px 48px;
+  }
+
+  .signin-copy,
+  .signin-card {
+    border-radius: 24px;
+    padding: 24px 18px;
+  }
+
+  .signin-title {
+    font-size: 2.1rem;
+  }
+
+  .signin-feature {
+    grid-template-columns: 48px 1fr;
+    padding: 16px;
+  }
+
+  .signin-feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
 }

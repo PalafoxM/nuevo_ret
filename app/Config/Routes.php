@@ -113,6 +113,7 @@ $routes->get('error404', 'Redireccion::enlace/15');
 $routes->post('pre-registro', 'Registro::recaptcha');
 $routes->post('registro-guardar', 'Registro::guardar');
 $routes->post('sesion', 'Ingresar::recaptcha');
+$routes->post('restablecer-password', 'Ingresar::restablecer_password');
 $routes->post('actualizar-contrasena', 'Contrasena::actualizar');
 $routes->post('guardar-form', 'Guardar_form');
 $routes->get('cambiar-contrasena', 'Contrasena');

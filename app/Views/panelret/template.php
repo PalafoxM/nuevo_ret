@@ -8,6 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <script>
+        document.documentElement.classList.add('ret-admin-loading');
+    </script>
+
     <title>RET | Registro Estatal de Turismo del Estado de Guanajuato</title>
 
     <!-- Bootstrap Core CSS -->

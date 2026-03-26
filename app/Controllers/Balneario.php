@@ -21,8 +21,8 @@ class Balneario extends BaseController {
 												BASE_URL.STATIC_CSS.'bootstrap.min.5.1.0.css',
 												BASE_URL.STATIC_CSS.'template.css?v=1.1.2',
 												BASE_URL.STATIC_CSS.'header.css',
-												BASE_URL.STATIC_CSS.'registro.css?v=1.1',
-												BASE_URL.STATIC_CSS.'form.css',
+												BASE_URL.STATIC_CSS.'registro.css?v=2.2',
+												BASE_URL.STATIC_CSS.'form.css?v=2.0',
 												BASE_URL.STATIC_CSS.'footer.css?v=1.1',
 												BASE_URL.STATIC_CSS.'bootstrap-icons.css',											
 											);

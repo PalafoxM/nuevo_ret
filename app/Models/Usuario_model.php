@@ -19,6 +19,20 @@ class Usuario_model extends Model {
         return true;
     }
 
+    function cambiar_password_por_email($email, $nueva)
+    {
+        $builder = $this->db->table('ret_usr');
+
+        $data = array(
+           'pass' => password_hash($nueva, PASSWORD_DEFAULT)
+        );
+
+        $builder->where('email', $email);
+        $builder->update($data);
+
+        return ($this->db->affectedRows() >= 0);
+    }
+
     function get($usuario, $campo, $tabla = 'vw_usr_datos', $id = 'id', $result = false, $array_where = [])
     {
         $builder = $this->db->table($tabla);
@@ -340,7 +354,20 @@ class Usuario_model extends Model {
                         <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 99 00 ext. 229 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
                     </div>';
 
-        send_email('Acceso a la Plataforma', $array_data['correo'], $mensaje);
+        $email_enviado = send_email('Acceso a la Plataforma', $array_data['correo'], $mensaje);
+
+        if($email_enviado)
+            $session->setFlashdata([
+                'titulo'        =>  'Credenciales enviadas',
+                'mensaje'       =>  'Tu acceso RET fue creado correctamente y las credenciales se enviaron al correo registrado.',
+                'alert_type'    =>  'success',
+            ]);
+        else
+            $session->setFlashdata([
+                'titulo'        =>  'Registro completado',
+                'mensaje'       =>  'Tu acceso RET ya fue creado, pero el correo con las credenciales no se pudo enviar en este momento. Puedes ingresar con los siguientes datos:<br><strong style="color:#198754;">Usuario:</strong> <strong style="color:#198754;">'.$clave.'</strong><br><strong style="color:#198754;">Contrasena:</strong> <strong style="color:#198754;">'.$password.'</strong>',
+                'alert_type'    =>  'warning',
+            ]);
 
         /* Inicia la sesión con usuario RET */
         ret_session($clave); 

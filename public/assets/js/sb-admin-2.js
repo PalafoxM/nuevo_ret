@@ -45,16 +45,38 @@
     }
 
     function show_loading(){
+        document.documentElement.classList.add('ret-admin-loading');
         $('body,html').css('overflow','hidden');
         $("#loading").fadeIn("fast");
         $(".overlay").fadeIn("fast"); 
     }
 
     function hide_loading(){
+        document.documentElement.classList.remove('ret-admin-loading');
         $("#loading").fadeOut("fast");
         $(".overlay").fadeOut("fast"); 
         $('body,html').css('overflow','auto');
     }
+
+    $(document).on('click', 'a[href]', function () {
+        var href = $(this).attr('href') || '';
+        var target = ($(this).attr('target') || '').toLowerCase();
+
+        if (
+            href === '' ||
+            href.charAt(0) === '#' ||
+            href.indexOf('javascript:') === 0 ||
+            target === '_blank'
+        ) {
+            return;
+        }
+
+        if (this.host && this.host !== window.location.host) {
+            return;
+        }
+
+        show_loading();
+    });
 
     $( "#changePasswordSubmit" ).click(function() {
         hideErrorChangePasswordMessages();

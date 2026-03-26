@@ -1,57 +1,89 @@
+<main class="signup-shell">
+  <section class="signup-hero">
+    <div class="signup-copy">
+      <span class="signup-eyebrow">Registro Estatal de Turismo</span>
+      <h1 class="signup-title">Abre tu registro en minutos.</h1>
+      <p class="signup-lead">Eliminamos el pre-registro por correo para que el alta sea mas directa, clara y comoda. Captura tu email, confirmalo y continuamos al formulario principal.</p>
 
-<main class="form-signin text-center form-body">
-  <form id="signin_form" action="<?=BASE_URL?>pre-registro" method="post">
-    <h1 class="h3 mb-3 fw-normal ret-titulo">Inscríbete al RET</h1>
-    <hr class="my-4">
-    <p class="lead">Inicia tu registro con una dirección de correo electrónico válida</p>
-
-    <div class="form-floating">
-      <input type="email" class="form-control" id="email" name="email" minlength="6" maxlength="120" placeholder="Correo Electrónico">
-      <label for="email">Correo Electrónico</label>
+      <div class="signup-highlights">
+        <article class="signup-highlight-card">
+          <span class="signup-highlight-icon"><i class="bi bi-lightning-charge-fill"></i></span>
+          <div>
+            <h2>Acceso inmediato</h2>
+            <p>Entras al registro sin esperar ligas de validacion.</p>
+          </div>
+        </article>
+        <article class="signup-highlight-card">
+          <span class="signup-highlight-icon"><i class="bi bi-shield-check"></i></span>
+          <div>
+            <h2>Flujo mas simple</h2>
+            <p>Menos pasos y menos puntos de falla para completar el tramite.</p>
+          </div>
+        </article>
+        <article class="signup-highlight-card">
+          <span class="signup-highlight-icon"><i class="bi bi-journal-text"></i></span>
+          <div>
+            <h2>Preparacion recomendada</h2>
+            <p>Ten a la mano RFC, datos del establecimiento y documentos basicos.</p>
+          </div>
+        </article>
+      </div>
     </div>
 
-    <div class="form-floating">
-      <input type="email" class="form-control" id="repeat_email" name="repeat_email" minlength="6" maxlength="120" placeholder="Repetir Correo Electrónico">
-      <label for="repeat_email">Repetir Correo Electrónico</label>
-    </div>
+    <div class="signup-panel">
+      <div class="signup-card">
+        <span class="signup-card-badge">Nuevo flujo</span>
+        <h2 class="ret-titulo signup-card-title">Inscribete al RET</h2>
+        <p class="signup-card-copy">Usa un correo vigente para iniciar tu expediente y continuar con el formulario completo.</p>
 
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Registro</button>
-    <hr class="my-4">
-    <p class="lead">Como alternativa, valida tu registro con las siguientes tecnologías</p>
-    <a href="<?=BASE_URL?>registro/facebook-signin" class="w-30 btn btn-sm btn-secondary btn-fcbk">Iniciar con Facebook</a>
-    <a href="<?=BASE_URL?>registro/google-signin" class="w-30 btn btn-sm btn-secondary btn-goog">Iniciar con Google</a>
-    <a href="<?=BASE_URL?>registro/microsoft-signin" class="w-30 btn btn-sm btn-secondary btn-msft">Iniciar con Microsoft</a>
-    <hr class="my-4">
-    <a href="<?=BASE_URL?>ingresar">¿Ya eres usuario? Inicia Sesión</a>
-  </form>
+        <?php if (session()->getFlashdata('mensaje')): ?>
+          <div class="alert alert-warning signup-alert" role="alert">
+            <?=session()->getFlashdata('mensaje')?>
+          </div>
+        <?php endif; ?>
+
+        <form id="signin_form" class="signup-form" action="<?=BASE_URL?>pre-registro" method="post" novalidate>
+          <div class="form-floating">
+            <input type="email" class="form-control" id="email" name="email" minlength="6" maxlength="120" placeholder="Correo electronico" required>
+            <label for="email">Correo electronico</label>
+          </div>
+
+          <div class="form-floating">
+            <input type="email" class="form-control" id="repeat_email" name="repeat_email" minlength="6" maxlength="120" placeholder="Confirmar correo electronico" required>
+            <label for="repeat_email">Confirmar correo electronico</label>
+          </div>
+
+          <div class="signup-inline-note">
+            <i class="bi bi-info-circle"></i>
+            Continuaras directamente al formulario de registro.
+          </div>
+
+          <button class="btn signup-primary-btn" type="submit">
+            Continuar al registro
+            <i class="bi bi-arrow-right-short"></i>
+          </button>
+        </form>
+
+        <a class="signup-secondary-link" href="<?=BASE_URL?>ingresar">Ya eres usuario? Inicia sesion</a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <script>
-  $('#signin_form').submit(function() {
-    event.preventDefault();
-    var email = $('#email').val();
-    var repeat_email = $('#repeat_email').val();
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('signin_form');
+    const email = document.getElementById('email');
+    const repeatEmail = document.getElementById('repeat_email');
 
-    if(email == repeat_email && email.length >=5)
-      grecaptcha.ready(function() {
-        grecaptcha.execute('<?=SITE_KEY?>', {action: 'submit'}).then(function(token) {
-          
-          $('#signin_form').prepend('<input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="' + token + '">');
-          $.post("pre-registro",{email: email, token: token}, function(result) {
-            
-            if (result.success)
-            {
-              alert('Recibirás un mensaje en tu bandeja de correo. Da clic en el enlace y continúa con tu registro.');
-              t1 = window.setTimeout(function(){ window.location = "<?=BASE_URL?>"; },5);
-            }
-            else
-              alert('Algo salió mal. Reporta este mensaje a ret@guanajuato.gob.mx o intenta más tarde.');
-            
-          });
+    form.addEventListener('submit', function (event) {
+      email.value = email.value.trim().toLowerCase();
+      repeatEmail.value = repeatEmail.value.trim().toLowerCase();
 
-        });;
-      });
-    else
-      alert('El correo electrónico no coincide.');
+      if (!email.value || !repeatEmail.value || email.value !== repeatEmail.value) {
+        event.preventDefault();
+        window.alert('Verifica que ambos correos electronicos coincidan antes de continuar.');
+      }
+    });
   });
 </script>

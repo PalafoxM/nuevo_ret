@@ -1,213 +1,165 @@
-    <main>
-      <div class="container_ret">
-        <div class="row">
-          <div class="col-lg-8">
-            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+<main class="home-shell">
+  <section class="home-hero container_ret">
+    <div class="home-hero-copy">
+      <span class="home-kicker">Registro Estatal de Turismo</span>
+      <h1 class="home-title">Una entrada mas clara, actual y poderosa para el RET.</h1>
+      <p class="home-lead">Conecta a los prestadores de servicios turisticos con los beneficios, requisitos, herramientas y tramites del Registro Estatal de Turismo de Guanajuato en una experiencia visual mas fresca y facil de recorrer.</p>
 
-              </div>
-              <div class="carousel-inner">
-
-                <div class="carousel-item active ret-banner slide1">
-                  <div class="container">
-                    <div class="carousel-caption carousel-text">
-                      <h1>Estar en RET te conviene</h1>
-                      <p>Formar parte de los Prestadores de Servicios Turísticos destacados de nuestro Estado de Guanajuato</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item ret-banner slide2">
-                  <div class="container">
-                    <div class="carousel-caption carousel-text">
-                      <h1>Estar en RET te conviene</h1>
-                      <p>Posibilidad de participar en programas de capacitación y certificación con los que cuenta la Secretaría de Turismo del Estado de Guanajuato</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item ret-banner slide3">
-                  <div class="container">
-                    <div class="carousel-caption carousel-text">
-                      <h1>Estar en RET te conviene</h1>
-                      <p>Posibilidad de participar en los esquemas de apoyo con los programas de financiamiento para MiPyMEs Turísticas, Incentivos a la Inversión Turística e Incentivos a la Competitividad y Programa Empresa Turística Rural</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item ret-banner slide4">
-                  <div class="container">
-                    <div class="carousel-caption carousel-text">
-                      <h1>Estar en RET te conviene</h1>
-                      <p>Facilitar el Tramite del Registro Nacional de Turismo (RNT)</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item ret-banner slide5">
-                  <div class="container">
-                    <div class="carousel-caption carousel-text">
-                      <h1>Estar en RET te conviene</h1>
-                      <p>Servir como instrumento de información y consulta ciudadana de los servicios turísticos del Estado de Guanajuato</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item ret-banner slide6">
-                  <div class="container">
-                    <div class="carousel-caption carousel-text">
-                      <h1>Estar en RET te conviene</h1>
-                      <p>La oportunidad de ser incluidos en los instrumentos de promoción y difusión de la Secretaría de Turismo a través de sus paginas web, redes sociales y plataformas de comercialización</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item ret-banner slide7">
-                  <div class="container">
-                    <div class="carousel-caption carousel-text">
-                      <h1>Estar en RET te conviene</h1>
-                      <p>Difusión en la principales plataformas digitales Consulta Ciudadana y Guanajuato MX</p>
-                    </div>
-                  </div>
-                </div>
-  <!-- Banner de recodatorio de servicio gratuito y digital -->
-                <div class="carousel-item ret-banner slide8">
-                  <div class="container">
-                    <div class="carousel-caption carousel-text">
-                      <h1></h1>
-                      <p></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-4 ret-destacado">
-
-            <div class="list-group w-auto">
-              <div class="list-group-item d-flex py-3 ret-destacado-titulo">
-                <div class="d-flex gap-2 w-100 justify-content-between">
-                  <div>
-                    <h6>Destacados</h6>
-                  </div>
-                </div>
-              </div>
-              <a href="<?=BASE_URL?>categorias-ret" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true" target="_blank">
-                <img src="<?=BASE_URL?>static/images/logo_gtoico.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-                <div class="d-flex gap-2 w-100 justify-content-between">
-                  <div>
-                    <h6 class="mb-0">Categorías</h6>
-                    <p class="mb-0 opacity-75">¿Qué es el Registro Estatal de Turismo?</p>
-                  </div>
-                </div>
-              </a>
-              <a href="<?=BASE_URL?>base-legal" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true" target="_blank">
-                <img src="<?=BASE_URL?>static/images/logo_gtoico.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-                <div class="d-flex gap-2 w-100 justify-content-between">
-                  <div>
-                    <h6 class="mb-0">Base Legal</h6>
-                    <p class="mb-0 opacity-75">Del Registro Estatal de Turismo</p>
-                  </div>
-                </div>
-              </a>
-              <a href="<?=BASE_URL?>beneficios" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true" target="_blank">
-                <img src="<?=BASE_URL?>static/images/logo_gtoico.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-                <div class="d-flex gap-2 w-100 justify-content-between">
-                  <div>
-                    <h6 class="mb-0">Beneficios</h6>
-                    <p class="mb-0 opacity-75">Del Registro Estatal de Turismo</p>
-                  </div>
-                </div>
-              </a>
-              <a href="<?=BASE_URL?>requisitos" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true" target="_blank">
-                <img src="<?=BASE_URL?>static/images/logo_gtoico.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-                <div class="d-flex gap-2 w-100 justify-content-between">
-                  <div>
-                    <h6 class="mb-0">Requisitos</h6>
-                    <p class="mb-0 opacity-75">Del Registro Estatal de Turismo</p>
-                  </div>
-                </div>
-              </a>
-              <a href="<?=BASE_URL?>que-giro" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true" target="_blank">
-                <img src="<?=BASE_URL?>static/images/logo_gtoico.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-                <div class="d-flex gap-2 w-100 justify-content-between">
-                  <div>
-                    <h6 class="mb-0">¿A qué giro pertenezco?</h6>
-                    <p class="mb-0 opacity-75">Catálogo de Prestadores de Servicios</p>
-                  </div>
-                </div>
-              </a>
-              <a href="<?=BASE_URL?>preguntas-frecuentes" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true" target="_blank">
-                <img src="<?=BASE_URL?>static/images/logo_gtoico.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-                <div class="d-flex gap-2 w-100 justify-content-between">
-                  <div>
-                    <h6 class="mb-0">Preguntas Frecuentes</h6>
-                    <p class="mb-0 opacity-75">Del Registro Estatal de Turismo</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <a href="<?=BASE_URL?>registro" class="btn btn-ret-home a-ret-home"><p>¿Eres nuevo en el RET?</p><h1><i class="bi-person-plus"></i> INSCRÍBETE</h1></a>
-          </div>
-          <div class="col-lg-6">
-            <a href="<?=BASE_URL?>ingresar" class="btn btn-ret-home a-ret-home"><p>¿Ya eres usuario?</p><h1><i class="bi-box-arrow-in-right"></i> INGRESA</h1></a>
-          </div>
-        </div>
-
-        <div class="container marketing">
-
-          <!-- Three columns of text below the carousel -->
-          <div class="row text-center">
-            <h1 class="display-6 fw-bold ret-titulo">Enlaces de Interés</h1>
-            <div class="col-lg-2">
-              <a href="https://drive.google.com/file/d/1Oh7TTrMF_icPM9jTg6NVm8EavWekl97h/view?usp=sharing" target="_blank"><svg class="bd-placeholder-img rounded-circle links-bar1" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></svg></a>
-
-            </div><!-- /.col-lg-2 -->
-            <div class="col-lg-2">
-              <a href="<?=BASE_URL?>secturgto" target="_blank"><svg class="bd-placeholder-img rounded-circle links-bar2" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></svg></a>
-
-            </div><!-- /.col-lg-2 -->
-            <div class="col-lg-2">
-              <a href="<?=BASE_URL?>oteg" target="_blank"><svg class="bd-placeholder-img rounded-circle links-bar3" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></svg></a>
-
-            </div><!-- /.col-lg-2 -->
-            <div class="col-lg-2">
-              <a href="<?=BASE_URL?>gtomx" target="_blank"><svg class="bd-placeholder-img rounded-circle links-bar4" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></svg></a>
-
-            </div><!-- /.col-lg-2 -->
-            <div class="col-lg-2">
-              <a href="<?=BASE_URL?>rnt" target="_blank"><svg class="bd-placeholder-img rounded-circle links-bar5" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></svg></a>
-
-            </div><!-- /.col-lg-2 -->
-            <div class="col-lg-2">
-              <a href="<?=BASE_URL?>secturmx" target="_blank"><svg class="bd-placeholder-img rounded-circle links-bar6" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"></svg></a>
-
-            </div><!-- /.col-lg-2 -->
-          </div><!-- /.row -->
-        </div><!-- /.container -->
+      <div class="home-pill-row">
+        <span class="home-pill"><i class="bi bi-stars"></i> Tramite digital</span>
+        <span class="home-pill"><i class="bi bi-patch-check"></i> Beneficios visibles</span>
+        <span class="home-pill"><i class="bi bi-building"></i> Prestadores de servicios</span>
       </div>
-    </main>
 
+      <div class="home-cta-row">
+        <a href="<?=BASE_URL?>registro" class="home-primary-cta">
+          <small>Comenzar ahora</small>
+          <strong><i class="bi bi-person-plus"></i> Inscribete al RET</strong>
+        </a>
+        <a href="<?=BASE_URL?>ingresar" class="home-secondary-cta">
+          <small>Retomar proceso</small>
+          <strong><i class="bi bi-box-arrow-in-right"></i> Ingresar al panel</strong>
+        </a>
+      </div>
+
+      <div class="home-stats-grid">
+        <article class="home-stat-card">
+          <strong>01</strong>
+          <span>Consulta requisitos, base legal y beneficios sin salir de la portada.</span>
+        </article>
+        <article class="home-stat-card">
+          <strong>02</strong>
+          <span>Accede rapido al registro nuevo o retoma un tramite en curso.</span>
+        </article>
+        <article class="home-stat-card">
+          <strong>03</strong>
+          <span>Navega a herramientas y enlaces institucionales desde un solo tablero.</span>
+        </article>
+      </div>
+    </div>
+
+    <div class="home-hero-visual">
+      <div class="home-visual-frame home-visual-main">
+        <div class="home-visual-overlay">
+          <span class="home-visual-tag">Guanajuato</span>
+          <h2>Estar en el RET te conviene.</h2>
+          <p>Capacitacion, difusion, consulta ciudadana y una plataforma mas simple para crecer con orden.</p>
+        </div>
+      </div>
+      <div class="home-visual-grid">
+        <div class="home-visual-frame home-visual-small home-visual-two"></div>
+        <div class="home-visual-frame home-visual-small home-visual-three"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section container_ret">
+    <div class="home-section-header">
+      <div>
+        <span class="home-section-kicker">Ruta rapida</span>
+        <h2 class="ret-titulo">Todo lo esencial, a un clic.</h2>
+      </div>
+      <p>Reordenamos los accesos mas consultados para que la portada sirva como punto de entrada real al sistema y no solo como un listado de enlaces.</p>
+    </div>
+
+    <div class="home-feature-grid">
+      <a href="<?=BASE_URL?>categorias-ret" class="home-feature-card" target="_blank">
+        <span class="home-feature-icon"><i class="bi bi-diagram-3"></i></span>
+        <h3>Categorias</h3>
+        <p>Entiende la clasificacion y el alcance del Registro Estatal de Turismo.</p>
+      </a>
+      <a href="<?=BASE_URL?>base-legal" class="home-feature-card" target="_blank">
+        <span class="home-feature-icon"><i class="bi bi-bank"></i></span>
+        <h3>Base legal</h3>
+        <p>Consulta el sustento juridico del RET y sus lineamientos principales.</p>
+      </a>
+      <a href="<?=BASE_URL?>beneficios" class="home-feature-card" target="_blank">
+        <span class="home-feature-icon"><i class="bi bi-trophy"></i></span>
+        <h3>Beneficios</h3>
+        <p>Descubre por que formar parte del RET fortalece la visibilidad del negocio.</p>
+      </a>
+      <a href="<?=BASE_URL?>requisitos" class="home-feature-card" target="_blank">
+        <span class="home-feature-icon"><i class="bi bi-clipboard-check"></i></span>
+        <h3>Requisitos</h3>
+        <p>Revisa la documentacion y los datos necesarios antes de iniciar tu tramite.</p>
+      </a>
+      <a href="<?=BASE_URL?>que-giro" class="home-feature-card" target="_blank">
+        <span class="home-feature-icon"><i class="bi bi-signpost-split"></i></span>
+        <h3>A que giro pertenezco</h3>
+        <p>Ubica tu actividad dentro del catalogo de prestadores de servicios.</p>
+      </a>
+      <a href="<?=BASE_URL?>preguntas-frecuentes" class="home-feature-card" target="_blank">
+        <span class="home-feature-icon"><i class="bi bi-chat-square-text"></i></span>
+        <h3>Preguntas frecuentes</h3>
+        <p>Resuelve dudas comunes antes de registrarte o continuar tu proceso.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="home-section home-section-soft">
+    <div class="container_ret">
+      <div class="home-dual-panel">
+        <div class="home-panel home-panel-primary">
+          <span class="home-panel-kicker">Beneficios clave</span>
+          <h2>Que ganas al estar dentro del RET</h2>
+          <ul class="home-benefit-list">
+            <li>Participacion en programas de capacitacion y certificacion.</li>
+            <li>Mayor facilidad para tramites complementarios como el RNT.</li>
+            <li>Difusion en plataformas digitales y herramientas de consulta.</li>
+            <li>Visibilidad institucional para el prestador de servicios.</li>
+          </ul>
+        </div>
+
+        <div class="home-panel home-panel-secondary">
+          <span class="home-panel-kicker">Acciones directas</span>
+          <h2>Elige tu siguiente movimiento</h2>
+          <div class="home-action-stack">
+            <a href="<?=BASE_URL?>registro" class="home-action-card">
+              <strong>Nuevo registro</strong>
+              <span>Abre tu expediente y comienza el tramite desde cero.</span>
+            </a>
+            <a href="<?=BASE_URL?>ingresar" class="home-action-card">
+              <strong>Ingresar</strong>
+              <span>Retoma un formulario, carga documentos o revisa tu avance.</span>
+            </a>
+            <a href="<?=BASE_URL?>consulta-ciudadana" class="home-action-card">
+              <strong>Consulta ciudadana</strong>
+              <span>Explora la informacion publica de los registros visibles.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section container_ret">
+    <div class="home-section-header">
+      <div>
+        <span class="home-section-kicker">Enlaces de interes</span>
+        <h2 class="ret-titulo">Herramientas y portales aliados</h2>
+      </div>
+      <p>Una seleccion mas limpia de accesos externos para consulta, difusion y apoyo al sector turistico.</p>
+    </div>
+
+    <div class="home-links-grid">
+      <a href="https://drive.google.com/file/d/1Oh7TTrMF_icPM9jTg6NVm8EavWekl97h/view?usp=sharing" target="_blank" class="home-link-card home-link-1">
+        <span>Protocolo Alba</span>
+      </a>
+      <a href="<?=BASE_URL?>secturgto" target="_blank" class="home-link-card home-link-2">
+        <span>SECTUR Guanajuato</span>
+      </a>
+      <a href="<?=BASE_URL?>oteg" target="_blank" class="home-link-card home-link-3">
+        <span>Observatorio Turistico</span>
+      </a>
+      <a href="<?=BASE_URL?>gtomx" target="_blank" class="home-link-card home-link-4">
+        <span>Guanajuato MX</span>
+      </a>
+      <a href="<?=BASE_URL?>rnt" target="_blank" class="home-link-card home-link-5">
+        <span>Registro Nacional de Turismo</span>
+      </a>
+      <a href="<?=BASE_URL?>secturmx" target="_blank" class="home-link-card home-link-6">
+        <span>SECTUR Federal</span>
+      </a>
+    </div>
+  </section>
+</main>

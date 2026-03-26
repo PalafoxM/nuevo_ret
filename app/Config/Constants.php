@@ -4,59 +4,79 @@
 | Constantes del proyecto
 |--------------------------------------------------------------------------
 */
-/* Development 
-define('BASE_ROOT', '/laragon/www/ret/');
-define('BASE_URL', 'https://127.0.0.1/ret/public/');
-define('BD_USER', 'root');
-define('BD_PASS', 's3d3turgt0');
-define('BD_NAME', 'sectur_ret');
-define('EMAIL_CC', 'conectimx@gmail.com');
-//define('EMAIL_BCC', 'mgmankel@gmail.com');
-define('PROTOCOL_GMAIL', 'smtp');
-define('SMTPHOST_GMAIL', 'ssl://smtp.gmail.com');
-// Google Maps
-//define('GOOGLE_MAPS', 'AIzaSyARIo7SN4_AiibndYJMlWiGyqJVnkOH-pc'); //Key Libre conectimx
-//define('GOOGLE_MAPS', 'AIzaSyA4-3tbFyPMqgQchar-o3tZ2Qb5QqYjEnE'); //Maps API Key mgmankel
-define('GOOGLE_MAPS', 'AIzaSyCUd-8IHxJX4H378oZXIC47b0yJQgLUOm0'); //Maps Local conectimx
-define('GMAPS_ALT', 'AIzaSyCUd-8IHxJX4H378oZXIC47b0yJQgLUOm0');
-// Google reCAPTCHA
-define('SITE_KEY', '6LfPBZwcAAAAAOWI-4G4JU5iAsD4TeFfTxrvRQTE');
-define('SECRET_KEY', '6LfPBZwcAAAAAJbrwQz7xKy56rQwwpCuG5hR5jjA');
-// Google OAuth
-define('GOOGLE_ID', '456360067698-f67k8urgv2riigh5oeoq4g1777obijap.apps.googleusercontent.com');
-define('GOOGLE_SECRET', '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');
-// Microsoft OAuth
-define('MICROSOFT_ID', '5978c835-2e37-4b9a-9e5f-62618a53c92d');
-define('MICROSOFT_SECRET', '3527Q~2R4kKytKiCTLsaGUCcJuuPBZ6AfPDWM');
-// Facebook OAuth
-define('FACEBOOK_ID', '685989632411440');
-define('FACEBOOK_SECRET', 'd07ba3c99d180a847c1ef1e392695933');*/
+/*
+|--------------------------------------------------------------------------
+| Configuracion por entorno
+|--------------------------------------------------------------------------
+*/
+$httpHost = $_SERVER['HTTP_HOST'] ?? '';
+$serverName = $_SERVER['SERVER_NAME'] ?? '';
+$serverAddr = $_SERVER['SERVER_ADDR'] ?? '';
+$serverHost = strtolower(trim($httpHost !== '' ? $httpHost : $serverName, '[]'));
+$serverAddr = strtolower(trim($serverAddr, '[]'));
+$isLocalHost = in_array($serverHost, ['localhost', '127.0.0.1', '::1'], true)
+    || in_array($serverAddr, ['127.0.0.1', '::1'], true)
+    || str_starts_with($serverHost, 'localhost:')
+    || str_starts_with($serverHost, '127.0.0.1:')
+    || str_starts_with($serverHost, '[::1]')
+    || str_starts_with($serverHost, '::1:');
 
-/* Production */
-define('BASE_ROOT', '/var/www/html/ret/');
-define('BASE_URL', 'https://registroestataldeturismo.guanajuato.gob.mx/');
-define('BD_USER', 'root');
-define('BD_PASS', '1deA&3FeCT1v@S');
-define('BD_NAME', 'gto_ret');
-define('EMAIL_CC', 'ret@guanajuato.gob.mx');
-//define('EMAIL_BCC', 'conectimx@gmail.com');
-define('PROTOCOL_GMAIL', 'smtp');
-define('SMTPHOST_GMAIL', 'ssl://smtp.gmail.com');
-// Google reCAPTCHA
-define('SITE_KEY', '6LdPPYwgAAAAAOgsRbX6OLqUi-hT2n3GCIR-bKDY');
-define('SECRET_KEY', '6LdPPYwgAAAAALaW96Rw-nb2xV_1rafVU_ntAXa6');
-// Google Maps
-define('GOOGLE_MAPS', 'AIzaSyDhFmRAVlHXeyGt9JKws7LRhxjSvfkP2To'); //Maps API Key SECTUR AIzaSyDhFmRAVlHXeyGt9JKws7LRhxjSvfkP2To, AIzaSyDfryN_Ua60Q9kEDkr1q63NaoSyNQdGngA
-define('GMAPS_ALT', 'AIzaSyCUd-8IHxJX4H378oZXIC47b0yJQgLUOm0');
-// Google OAuth
-define('GOOGLE_ID', '460048895404-4uag379t8jb6kliak4a9bodr5en9o8f8.apps.googleusercontent.com');
-define('GOOGLE_SECRET', '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');
-// Microsoft OAuth
-define('MICROSOFT_ID', 'd62d5e1e-81f0-44f7-9d6e-2fa5831a83d4');
-define('MICROSOFT_SECRET', 'vFE8Q~5ZutZlIUM3n66VCE6EBsRc7LK~VmevUdl9');
-// Facebook OAuth
-define('FACEBOOK_ID', '1455395174913405');
-define('FACEBOOK_SECRET', '72457dfc775932afb8776dcd3c389764');
+if ($isLocalHost) {
+    define('BASE_ROOT', 'C:/wamp64/www/ret/');
+    $baseHost = $httpHost !== '' ? $httpHost : 'localhost';
+    define('BASE_URL', 'http://' . $baseHost . '/ret/');
+    define('BD_USER', 'root');
+    define('BD_PASS', '');
+    define('BD_NAME', 'gto_ret');
+    define('BD_PORT', 3307);
+    define('EMAIL_CC', 'conectimx@gmail.com');
+    //define('EMAIL_BCC', 'mgmankel@gmail.com');
+    define('PROTOCOL_GMAIL', 'smtp');
+    define('SMTPHOST_GMAIL', 'ssl://smtp.gmail.com');
+    // Google Maps
+    //define('GOOGLE_MAPS', 'AIzaSyARIo7SN4_AiibndYJMlWiGyqJVnkOH-pc'); //Key Libre conectimx
+    //define('GOOGLE_MAPS', 'AIzaSyA4-3tbFyPMqgQchar-o3tZ2Qb5QqYjEnE'); //Maps API Key mgmankel
+    define('GOOGLE_MAPS', 'AIzaSyCUd-8IHxJX4H378oZXIC47b0yJQgLUOm0'); //Maps Local conectimx
+    define('GMAPS_ALT', 'AIzaSyCUd-8IHxJX4H378oZXIC47b0yJQgLUOm0');
+    // Google reCAPTCHA
+    define('SITE_KEY', '6LfPBZwcAAAAAOWI-4G4JU5iAsD4TeFfTxrvRQTE');
+    define('SECRET_KEY', '6LfPBZwcAAAAAJbrwQz7xKy56rQwwpCuG5hR5jjA');
+    // Google OAuth
+    define('GOOGLE_ID', '456360067698-f67k8urgv2riigh5oeoq4g1777obijap.apps.googleusercontent.com');
+    define('GOOGLE_SECRET', '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');
+    // Microsoft OAuth
+    define('MICROSOFT_ID', '5978c835-2e37-4b9a-9e5f-62618a53c92d');
+    define('MICROSOFT_SECRET', '3527Q~2R4kKytKiCTLsaGUCcJuuPBZ6AfPDWM');
+    // Facebook OAuth
+    define('FACEBOOK_ID', '685989632411440');
+    define('FACEBOOK_SECRET', 'd07ba3c99d180a847c1ef1e392695933');
+} else {
+    define('BASE_ROOT', '/var/www/html/ret/');
+    define('BASE_URL', 'https://registroestataldeturismo.guanajuato.gob.mx/');
+    define('BD_USER', 'root');
+    define('BD_PASS', '1deA&3FeCT1v@S');
+    define('BD_NAME', 'gto_ret');
+    define('BD_PORT', 3306);
+    define('EMAIL_CC', 'ret@guanajuato.gob.mx');
+    //define('EMAIL_BCC', 'conectimx@gmail.com');
+    define('PROTOCOL_GMAIL', 'smtp');
+    define('SMTPHOST_GMAIL', 'ssl://smtp.gmail.com');
+    // Google reCAPTCHA
+    define('SITE_KEY', '6LdPPYwgAAAAAOgsRbX6OLqUi-hT2n3GCIR-bKDY');
+    define('SECRET_KEY', '6LdPPYwgAAAAALaW96Rw-nb2xV_1rafVU_ntAXa6');
+    // Google Maps
+    define('GOOGLE_MAPS', 'AIzaSyDhFmRAVlHXeyGt9JKws7LRhxjSvfkP2To'); //Maps API Key SECTUR AIzaSyDhFmRAVlHXeyGt9JKws7LRhxjSvfkP2To, AIzaSyDfryN_Ua60Q9kEDkr1q63NaoSyNQdGngA
+    define('GMAPS_ALT', 'AIzaSyCUd-8IHxJX4H378oZXIC47b0yJQgLUOm0');
+    // Google OAuth
+    define('GOOGLE_ID', '460048895404-4uag379t8jb6kliak4a9bodr5en9o8f8.apps.googleusercontent.com');
+    define('GOOGLE_SECRET', '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');
+    // Microsoft OAuth
+    define('MICROSOFT_ID', 'd62d5e1e-81f0-44f7-9d6e-2fa5831a83d4');
+    define('MICROSOFT_SECRET', 'vFE8Q~5ZutZlIUM3n66VCE6EBsRc7LK~VmevUdl9');
+    // Facebook OAuth
+    define('FACEBOOK_ID', '1455395174913405');
+    define('FACEBOOK_SECRET', '72457dfc775932afb8776dcd3c389764');
+}
 
 /* Google Analytics */
 define('GOOGLE_ANALYTICS', 'UA-33018357-1');

@@ -1,31 +1,415 @@
-/*
-
-Estilos para Registro Estatal de Turismo del Estado de Guanajuato
-Bootstrap 5.1.0
-Versión:  1.0
-Autor: ConecTI.mx
-Revisión: 30/11/2021
-
-*/
-.text-white-50 { 
-  color: rgba(255, 255, 255, .5); 
+.ret-dynamic-shell {
+  padding: 30px 20px 80px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 138, 0, 0.12), transparent 20%),
+    radial-gradient(circle at right center, rgba(13, 110, 253, 0.11), transparent 26%),
+    linear-gradient(180deg, #f4f8fd 0%, #eaf2fb 100%);
 }
 
-.bg-blue { 
-  background-color: #0159bc; 
+.ret-dynamic-layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.88fr) minmax(0, 1.45fr);
+  gap: 32px;
+  align-items: start;
 }
 
-.icon-bar{
+.ret-dynamic-aside {
+  position: sticky;
+  top: 22px;
+  padding: 34px 30px;
+  border-radius: 30px;
+  background:
+    linear-gradient(160deg, rgba(7, 36, 89, 0.98), rgba(13, 88, 174, 0.94)),
+    linear-gradient(180deg, #0d3f84 0%, #0d6efd 100%);
+  box-shadow: 0 28px 70px rgba(10, 42, 91, 0.2);
+  color: #fff;
+}
+
+.ret-dynamic-title {
+  margin: 18px 0 10px;
+  font-family: 'Baloo', sans-serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.04;
+  color: #fff2d9;
+}
+
+.ret-dynamic-lead {
+  margin: 0 0 24px;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: 'Proxima Nova Light', sans-serif;
+  line-height: 1.7;
+}
+
+.ret-dynamic-summary {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.ret-dynamic-summary-card,
+.ret-dynamic-progress-card {
+  padding: 18px 18px 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.ret-dynamic-summary-label,
+.ret-dynamic-progress-copy span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(220, 236, 255, 0.84);
+}
+
+.ret-dynamic-summary-card strong,
+.ret-dynamic-progress-copy strong {
+  display: block;
+  color: #fff;
+  font-size: 1.05rem;
+  word-break: break-word;
+}
+
+.ret-dynamic-progress-copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 12px;
+}
+
+.ret-dynamic-progress {
+  height: 14px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.ret-dynamic-progress-bar {
+  background: linear-gradient(135deg, #ffb347 0%, #ff8a00 100%);
+  color: #fff;
+  font-weight: 700;
+}
+
+.ret-dynamic-progress-card p {
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.6;
+}
+
+.ret-dynamic-content {
+  min-width: 0;
+}
+
+.ret-dynamic-alert {
+  margin-bottom: 22px;
+}
+
+.ret-error-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.ret-error-list li + li {
+  margin-top: 6px;
+}
+
+.ret-dynamic-card {
+  padding: 34px 30px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(14, 49, 97, 0.08);
+  box-shadow: 0 24px 80px rgba(17, 45, 89, 0.12);
+}
+
+.ret-dynamic-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.ret-dynamic-card-title {
+  margin-bottom: 8px;
+}
+
+.ret-dynamic-card-copy {
+  margin: 0;
+  color: #5a6b83;
+  line-height: 1.6;
+}
+
+.ret-dynamic-card-side {
+  min-width: 190px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: #f3f8fd;
+  border: 1px solid #dce7f3;
+}
+
+.ret-dynamic-card-side span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6d7e95;
+}
+
+.ret-dynamic-card-side strong {
+  color: #0f3767;
+}
+
+.ret-dynamic-grid .form-label {
+  margin-bottom: 8px;
+  color: #16385f;
+  font-size: 0.95rem;
+}
+
+.ret-form-field .form-control,
+.ret-form-field .form-select,
+.ret-form-check,
+.ret-map-card,
+.ret-text-block,
+.ret-action-slot {
+  border-radius: 22px;
+}
+
+.ret-form-field .form-control,
+.ret-form-field .form-select,
+.ret-textarea {
+  min-height: 58px;
+  border-radius: 18px;
+  border: 1px solid #d5e0ec;
+  background: #fbfdff;
+  box-shadow: none;
+  padding: 0.9rem 1rem;
+}
+
+.ret-form-field .form-control:focus,
+.ret-form-field .form-select:focus,
+.ret-textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.22rem rgba(13, 110, 253, 0.14);
+}
+
+.ret-form-field .form-control:disabled,
+.ret-form-field .form-select:disabled,
+.ret-textarea:disabled {
+  background: #eef3f8;
+  color: #66758d;
+}
+
+.ret-textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.ret-section-bar {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 18px 20px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0d4fa3 0%, #1570ef 100%);
+  box-shadow: 0 18px 44px rgba(13, 80, 163, 0.18);
+  color: #fff;
+}
+
+.ret-section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 1.35rem;
+}
+
+.ret-section-bar h3 {
+  margin: 2px 0 6px;
+  font-size: 1.15rem;
+}
+
+.ret-section-bar p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.55;
+}
+
+.ret-map-card {
+  padding: 18px 20px 20px;
+  background: #f6faff;
+  border: 1px solid #dbe7f3;
+}
+
+.ret-map-copy {
+  margin-bottom: 14px;
+  color: #5a6b83;
+}
+
+.ret-map-surface {
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  background: #d5dfec;
+  overflow: hidden;
+}
+
+.ret-form-check {
+  padding: 16px 18px;
+  background: #f7fbff;
+  border: 1px solid #dce7f3;
+}
+
+.ret-form-check .form-check-input {
+  margin-top: 0.25rem;
+}
+
+.ret-form-check .form-check-label {
+  color: #19385d;
+  line-height: 1.6;
+}
+
+.ret-file-link {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 8px;
+  color: #0f57a8;
+  text-decoration: none;
+}
+
+.ret-file-link:hover {
+  color: #08376b;
+}
+
+.ret-form-link,
+.ret-form-action {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 58px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  font-weight: 700;
+  border: none;
+}
+
+.ret-form-link {
+  background: #eff5fb;
+  color: #0f57a8;
+  border: 1px solid #dbe5f2;
+}
+
+.ret-form-link:hover {
+  color: #08376b;
+  background: #e5eef8;
+}
+
+.ret-form-action-primary {
+  background: linear-gradient(135deg, #ff8a00 0%, #ff6a00 100%);
+  color: #fff;
+  box-shadow: 0 16px 32px rgba(255, 122, 0, 0.22);
+}
+
+.ret-form-action-light {
+  background: linear-gradient(135deg, #0b4ea2 0%, #0f6be5 100%);
+  color: #fff;
+  box-shadow: 0 16px 32px rgba(15, 87, 168, 0.18);
+}
+
+.ret-form-action:hover,
+.ret-form-action:focus {
+  color: #fff;
+}
+
+.ret-form-action:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.ret-action-feedback {
+  margin-top: 8px;
+}
+
+.ret-divider {
+  margin: 2px 0;
+  border-color: #e1eaf3;
+  opacity: 1;
+}
+
+.ret-text-block h6 {
+  margin: 0;
+  color: #1a3c63;
+  font-size: 1rem;
+}
+
+.text-white-50 {
+  color: rgba(255, 255, 255, .5);
+}
+
+.bg-blue {
+  background-color: #0159bc;
+}
+
+.icon-bar {
   font-size: medium;
   padding: 10px;
 }
 
-.form-bar{
+.form-bar {
   font-size: 1.2rem !important;
   text-align: left !important;
 }
 
-.progress{
+.progress {
   background-color: #9b9fa3 !important;
+}
 
+@media (max-width: 991.98px) {
+  .ret-dynamic-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ret-dynamic-aside {
+    position: static;
+  }
+
+  .ret-dynamic-card-header {
+    flex-direction: column;
+  }
+
+  .ret-dynamic-card-side {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .ret-dynamic-shell {
+    padding: 20px 14px 56px;
+  }
+
+  .ret-dynamic-aside,
+  .ret-dynamic-card {
+    padding: 24px 18px;
+    border-radius: 24px;
+  }
+
+  .ret-section-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .ret-section-icon {
+    width: 50px;
+    height: 50px;
+  }
 }

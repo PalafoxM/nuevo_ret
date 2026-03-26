@@ -12,10 +12,10 @@ class Guardar_form extends BaseController {
 			$this->validation       = \Config\Services::validation();
 
 
-			$fields 	= 	$this->session->getFlashdata('fields');
-			$matrix 	= 	$this->session->getFlashdata('matrix');
-			$files 		= 	$this->session->getFlashdata('files');
-			$validate 	= 	$this->session->getFlashdata('validate');
+			$fields 	= 	$this->session->getFlashdata('fields') ?? [];
+			$matrix 	= 	$this->session->getFlashdata('matrix') ?? [];
+			$files 		= 	$this->session->getFlashdata('files') ?? [];
+			$validate 	= 	$this->session->getFlashdata('validate') ?? [];
 			$controller	= 	$this->session->getFlashdata('controller');
 			$next_cont	= 	$this->session->getFlashdata('next_cont');
 	        
@@ -46,7 +46,12 @@ class Guardar_form extends BaseController {
 
 				$$name 		= 	$this->request->getFile($name);
 
-				if( ! $$name->isValid() )
+				if(
+					! $$name
+					|| ! ($$name instanceof \CodeIgniter\HTTP\Files\UploadedFile)
+					|| $$name->getError() === UPLOAD_ERR_NO_FILE
+					|| ! $$name->isValid()
+				)
 				{
 					unset($$name);
 					unset($validate[$name]);
@@ -87,7 +92,8 @@ class Guardar_form extends BaseController {
 				$alerta = array('titulo'			=>		'Validación',
 								'mensaje'			=>		'Hubo un error en la validación. Favor de verificar la información cargada e intentar nuevamente.',
 								'alert_type'		=>		'danger',
-								'errors'			=>		$this->validation->getErrors()
+								'errors'			=>		$this->validation->getErrors(),
+								'values'			=>		$dbfield
 							);
 				$this->session->setFlashdata($alerta);
 
