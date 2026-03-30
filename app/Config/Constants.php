@@ -16,10 +16,10 @@ $serverHost = strtolower(trim($httpHost !== '' ? $httpHost : $serverName, '[]'))
 $serverAddr = strtolower(trim($serverAddr, '[]'));
 $isLocalHost = in_array($serverHost, ['localhost', '127.0.0.1', '::1'], true)
     || in_array($serverAddr, ['127.0.0.1', '::1'], true)
-    || str_starts_with($serverHost, 'localhost:')
-    || str_starts_with($serverHost, '127.0.0.1:')
-    || str_starts_with($serverHost, '[::1]')
-    || str_starts_with($serverHost, '::1:');
+    || strpos($serverHost, 'localhost:')
+    || strpos($serverHost, '127.0.0.1:')
+    || strpos($serverHost, '[::1]')
+    || strpos($serverHost, '::1:');
 
 if ($isLocalHost) {
     define('BASE_ROOT', 'C:/wamp64/www/ret/');
