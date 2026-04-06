@@ -2,8 +2,8 @@
   <section class="signin-hero">
     <div class="signin-copy">
       <span class="signin-eyebrow">Acceso RET</span>
-      <h1 class="signin-title">Ingresa y continua tu tramite.</h1>
-      <p class="signin-lead">Accede a tu panel para capturar informacion, cargar documentos y dar seguimiento al avance de tu registro en una experiencia mas clara y actual.</p>
+      <h1 class="signin-title">Ingresa y continúa tu trámite.</h1>
+      <p class="signin-lead">Accede a tu panel para capturar información, cargar documentos y dar seguimiento al avance de tu registro en una experiencia más clara y actual.</p>
 
       <div class="signin-feature-list">
         <article class="signin-feature">
@@ -17,14 +17,14 @@
           <span class="signin-feature-icon"><i class="bi bi-cloud-arrow-up"></i></span>
           <div>
             <h2>Carga de documentos</h2>
-            <p>Sube informacion legal, tecnica e imagenes del establecimiento con seguimiento por etapas.</p>
+            <p>Sube información legal, técnica e imágenes del establecimiento con seguimiento por etapas.</p>
           </div>
         </article>
         <article class="signin-feature">
           <span class="signin-feature-icon"><i class="bi bi-shield-lock"></i></span>
           <div>
             <h2>Acceso seguro</h2>
-            <p>Ingresa con tu usuario RET o usa las alternativas de autenticacion disponibles.</p>
+            <p>Ingresa con tu usuario RET o usa las alternativas de autenticación disponibles.</p>
           </div>
         </article>
       </div>
@@ -32,9 +32,9 @@
 
     <div class="signin-panel">
       <div class="signin-card">
-        <span class="signin-badge">Iniciar sesion</span>
+        <span class="signin-badge">Iniciar sesión</span>
         <h2 class="ret-titulo signin-card-title">Ingresa al RET</h2>
-        <p class="signin-card-copy">Usa tu usuario y contrasena para continuar con tu registro.</p>
+        <p class="signin-card-copy">Usa tu usuario y contraseña para continuar con tu registro.</p>
 
         <form id="login_form" class="signin-form" action="<?=BASE_URL?>sesion" method="post">
           <div class="form-floating">
@@ -42,28 +42,28 @@
             <label for="clave">Usuario</label>
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="pass" name="pass" placeholder="Contrasena" required>
-            <label for="pass">Contrasena</label>
+            <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña" required>
+            <label for="pass">Contraseña</label>
           </div>
 
           <button class="btn signin-primary-btn" type="submit">
-            Iniciar sesion
+            Iniciar sesión
             <i class="bi bi-arrow-right-short"></i>
           </button>
         </form>
 
         <div class="signin-recovery-box">
           <div>
-            <span class="signin-recovery-label">Necesitas ayuda?</span>
+            <span class="signin-recovery-label">¿Necesitas ayuda?</span>
             <p class="signin-recovery-copy">Recupera tu acceso con el correo registrado en el RET.</p>
           </div>
           <button type="button" class="signin-text-action" id="forgot_password_trigger">
             <i class="bi bi-key"></i>
-            Restablecer contrasena
+            Restablecer contraseña
           </button>
         </div>
 
-        <a class="signin-secondary-link" href="<?=BASE_URL?>registro">No eres usuario? Registrate</a>
+        <a class="signin-secondary-link" href="<?=BASE_URL?>registro">¿No eres usuario? Regístrate</a>
       </div>
     </div>
   </section>

@@ -4,7 +4,7 @@
           <div class="col-xs-12 col-sm-3">
             <a href="https://registroestataldeturismo.guanajuato.gob.mx/paneldash" ><img class="mt-3" src="<?=BASE_URL?>static/images/logo_gtosectur_footer.png" alt="Secretaría de Turismo del Estado de Guanajuato"></a>
             <label class="mb-3"><h4>Atención ciudadana</h4></label>
-            <label class="mb-3"><a href="<?=BASE_URL?>telefono" target="_blank"><i class="bi-phone" aria-hidden="true"></i> (472) 103 9900 EXT 229</a></label>
+            <label class="mb-3"><a href="<?=BASE_URL?>telefono" target="_blank"><i class="bi-phone" aria-hidden="true"></i> (472) 103 9900 EXT 158 y 160</a></label>
             <!--<label class="mb-3"><a href="https://wa.me/5214772745825" target="_blank"><i class="bi-whatsapp"></i> 477 274 5825</a></label>-->
             <label class="mb-3"><a href="<?=BASE_URL?>email" target="_blank"><i class="bi-envelope" aria-hidden="true"></i> ret@guanajuato.gob.mx</a></label>
           </div>
