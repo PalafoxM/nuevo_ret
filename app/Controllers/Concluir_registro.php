@@ -44,7 +44,7 @@ class Concluir_registro extends BaseController {
 			$data['form_field']		=		[
 												['link', '<i class="bi-list-stars icon-bar"></i> Ir al Panel', '_self', BASE_URL.'panel', '100', '', 'light', '', ''],
 												['bar', '                 Trámite en Validación                 ', $this->session->get('icon_bs'), '', '', '', '', '', '¡Gracias por concluir tu inscripción al RET!'],
-												['texto', 'Estaremos revisando tus documentos y si hubiera alguna observación o bien, esté aprobado tu registro te llegará un correo en un plazo máximo de 5 días hábiles.<br><br>¡Muchas gracias!<br>Cualquier duda estamos a tus órdenes en el teléfono<br>(472) 103 99 00 ext. 229'],
+												['texto', 'Estaremos revisando tus documentos y si hubiera alguna observación o bien, esté aprobado tu registro te llegará un correo en un plazo máximo de 5 días hábiles.<br><br>¡Muchas gracias!<br>Cualquier duda estamos a tus órdenes en el teléfono<br>(472) 103 99 00 ext. 158 y/o 160'],
 												['iframe', 'Su opinión es muy importante para nosotros', '', 'https://forms.gle/JiF6jpqRaAhQeAzS7', '', '', '', '', ' Lo invitamos a responder una breve encuesta de satifacción'],
 												['hr'],
 												['link', 'Cerrar Sesión', '_self', BASE_URL.'salir', '', '', 'danger', '', ''],

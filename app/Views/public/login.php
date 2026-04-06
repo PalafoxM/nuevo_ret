@@ -46,10 +46,13 @@
             <label for="pass">Contraseña</label>
           </div>
 
-          <button class="btn signin-primary-btn" type="submit">
+          <!-- Botón -->
+          <button id="loginBtn" class="btn signin-primary-btn" type="submit">
+            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
             Iniciar sesión
             <i class="bi bi-arrow-right-short"></i>
           </button>
+
         </form>
 
         <div class="signin-recovery-box">
@@ -72,10 +75,10 @@
 <script>
   $('#forgot_password_trigger').on('click', function() {
     Swal.fire({
-      title: 'Restablecer contrasena',
+      title: 'Restablecer contraseña',
       text: 'Captura el correo con el que te registraste en el RET.',
       input: 'email',
-      inputLabel: 'Correo electronico',
+      inputLabel: 'Correo electrónico',
       inputPlaceholder: 'nombre@correo.com',
       showCancelButton: true,
       confirmButtonText: 'Enviar',
@@ -84,7 +87,7 @@
       cancelButtonColor: '#7b8796',
       inputValidator: function(value) {
         if (!value) {
-          return 'Debes capturar un correo electronico.';
+          return 'Debes capturar un correo electrónico.';
         }
       },
       preConfirm: function(email) {
@@ -118,33 +121,41 @@
         Swal.fire({
           icon: 'warning',
           title: 'Correo no disponible',
-          html: 'La contrasena fue restablecida, pero no se pudo enviar el correo.<br><br><strong style="color:#198754;">Usuario:</strong> <strong style="color:#198754;">' + result.value.credentials.usuario + '</strong><br><strong style="color:#198754;">Contrasena:</strong> <strong style="color:#198754;">' + result.value.credentials.contrasena + '</strong>'
+          html: 'La contraseña fue restablecida, pero no se pudo enviar el correo.<br><br><strong style="color:#198754;">Usuario:</strong> <strong style="color:#198754;">' + result.value.credentials.usuario + '</strong><br><strong style="color:#198754;">Contraseña:</strong> <strong style="color:#198754;">' + result.value.credentials.contrasena + '</strong>'
         });
         return;
       }
 
       Swal.fire({
         icon: 'warning',
-        title: 'Validacion',
+        title: 'Validación',
         text: result.value.message || 'No fue posible procesar la solicitud.'
       });
     });
   });
 
-  $('#login_form').submit(function(event) {
+ $('#login_form').submit(function(event) {
     event.preventDefault();
     var clave = $('#clave').val();
     var passw = $('#pass').val();
+
+    // Desactivar botón y mostrar spinner
+    $('#loginBtn').prop('disabled', true).find('.spinner-border').removeClass('d-none');
+
     grecaptcha.ready(function() {
-      grecaptcha.execute('<?=SITE_KEY?>', {action: 'submit'}).then(function(token) {
-        $('#login_form').prepend('<input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="' + token + '">');
-        $.post("sesion", {clave: clave, pass: passw, token: token}, function(result) {
-          if (result.success)
-            window.setTimeout(function(){ window.location = "<?=BASE_URL?>ingresar"; }, 5);
-          else
-            alert('No puedes acceder a la plataforma.');
+        grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'submit'}).then(function(token) {
+            $('#login_form').prepend('<input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="' + token + '">');
+            $.post("sesion", {clave: clave, pass: passw, token: token}, function(result) {
+                if (result.success) {
+                    window.setTimeout(function(){ window.location = "<?php echo BASE_URL; ?>ingresar"; }, 5);
+                } else {
+                    alert('No puedes acceder a la plataforma.');
+                }
+                // Reactivar botón y ocultar spinner
+                $('#loginBtn').prop('disabled', false).find('.spinner-border').addClass('d-none');
+            });
         });
-      });
     });
-  });
+});
+
 </script>
