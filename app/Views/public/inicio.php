@@ -63,32 +63,38 @@
     </div>
 
     <div class="home-feature-grid">
-      <a href="<?=BASE_URL?>categorias-ret" class="home-feature-card" target="_blank">
+      <!-- <a href="<?=BASE_URL?>categorias-ret" class="home-feature-card" target="_blank"> -->
+      <a class="home-feature-card">
         <span class="home-feature-icon"><i class="bi bi-diagram-3"></i></span>
         <h3>Categorías</h3>
         <p>Entiende la clasificación y el alcance del Registro Estatal de Turismo.</p>
       </a>
-      <a href="<?=BASE_URL?>base-legal" class="home-feature-card" target="_blank">
+      <!-- <a href="<?=BASE_URL?>base-legal" class="home-feature-card" target="_blank"> -->
+      <a class="home-feature-card">
         <span class="home-feature-icon"><i class="bi bi-bank"></i></span>
         <h3>Base legal</h3>
         <p>Consulta el sustento jurídico del RET y sus lineamientos principales.</p>
       </a>
-      <a href="<?=BASE_URL?>beneficios" class="home-feature-card" target="_blank">
+      <!-- <a href="<?=BASE_URL?>beneficios" class="home-feature-card" target="_blank"> -->
+      <a class="home-feature-card">
         <span class="home-feature-icon"><i class="bi bi-trophy"></i></span>
         <h3>Beneficios</h3>
         <p>Descubre por qué formar parte del RET fortalece la visibilidad del negocio.</p>
       </a>
-      <a href="<?=BASE_URL?>requisitos" class="home-feature-card" target="_blank">
+      <!-- <a href="<?=BASE_URL?>requisitos" class="home-feature-card" target="_blank"> -->
+      <a class="home-feature-card">
         <span class="home-feature-icon"><i class="bi bi-clipboard-check"></i></span>
         <h3>Requisitos</h3>
         <p>Revisa la documentación y los datos necesarios antes de iniciar tu trámite.</p>
       </a>
-      <a href="<?=BASE_URL?>que-giro" class="home-feature-card" target="_blank">
+      <!-- <a href="<?=BASE_URL?>que-giro" class="home-feature-card" target="_blank"> -->
+      <a class="home-feature-card">
         <span class="home-feature-icon"><i class="bi bi-signpost-split"></i></span>
         <h3>¿A qué giro pertenezco?</h3>
         <p>Ubica tu actividad dentro del catálogo de prestadores de servicios turísticos.</p>
       </a>
-      <a href="<?=BASE_URL?>preguntas-frecuentes" class="home-feature-card" target="_blank">
+      <!-- <a href="<?=BASE_URL?>preguntas-frecuentes" class="home-feature-card" target="_blank"> -->
+      <a class="home-feature-card">
         <span class="home-feature-icon"><i class="bi bi-chat-square-text"></i></span>
         <h3>Preguntas frecuentes</h3>
         <p>Resuelve dudas comunes antes de registrarte o continuar tu proceso.</p>
