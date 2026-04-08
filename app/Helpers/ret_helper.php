@@ -142,7 +142,7 @@
                 $config['SMTPPort']         =   '465';
                 $config['SMTPTimeout']      =   '7';
                 $config['SMTPUser']         =   'ret@guanajuato.gob.mx';
-                $config['SMTPPass']         =   'rwqxovrdtrzacntx';
+                $config['SMTPPass']         =   'oojm jehp qcca yabh';
                 $config['charset']          =   'utf-8';
                 $config['SMTPCrypto']       =   'ssl';
                 $config['newline']          =   "\r\n";
