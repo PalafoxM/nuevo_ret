@@ -138,7 +138,7 @@ class Panel extends BaseController {
 
 			<strong> ATENTAMENTE, <br>
 			Registro Estatal de Turismo <br>
-			Secretaria de Turismo del Estado de Guanajuato </strong>';
+			Secretaria de Turismo e Identidad del Estado de Guanajuato </strong>';
 
 	        send_email('Tramite RET / APROBADO', $this->usuario_model->get($_id, 'email'), $mensaje, EMAIL_CC, '', BASE_ROOT.'writable/uploads/mpdf/Cedula_'.$_id.'.pdf');
 		}
