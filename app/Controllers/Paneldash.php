@@ -27,7 +27,7 @@ class Paneldash extends BaseController {
         return [
             [
                 'title' => 'Registros activos',
-                'value' => $this->countRecords(['visible' => 1, 'giro <>' => 0, 'municipio <>' => 0]),
+                'value' => $this->countRecords(['giro <>' => 0, 'municipio <>' => 0]),
                 'tone'  => 'navy',
                 'icon'  => 'fa-building-o',
                 'url'   => BASE_URL.'paneladm/todos',
