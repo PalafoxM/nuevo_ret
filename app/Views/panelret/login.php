@@ -485,11 +485,11 @@
                         </span>
                         <h2 class="auth-title">Panel de control del Registro Estatal de Turismo</h2>
                         <p class="auth-copy">
-                            Ingresa para administrar solicitudes, revisar avances y dar seguimiento a los registros de manera mas clara y segura.
+                            Ingresa para administrar solicitudes, revisar avances y dar seguimiento a los registros de manera más clara y segura.
                         </p>
                         <ul class="auth-points">
-                            <li>Acceso rapido a la operacion diaria del panel.</li>
-                            <li>Experiencia de inicio mas clara mientras se valida el acceso.</li>
+                            <li>Acceso rápido a la operación diaria del panel.</li>
+                            <li>Experiencia de inicio más clara mientras se valida el acceso.</li>
                             <li>Mensajes de apoyo para que la espera no se sienta detenida.</li>
                         </ul>
                     </div>
@@ -505,7 +505,7 @@
                     </div>
 
                     <h1>Bienvenido</h1>
-                    <p class="lead-copy">Captura tus credenciales para entrar al panel. Cuando el acceso tarde unos segundos, te mostraremos el progreso para que el proceso se sienta acompanado.</p>
+                    <p class="lead-copy">Captura tus credenciales para entrar al panel. Cuando el acceso tarde unos segundos, te mostraremos el progreso para que el proceso se sienta acompañado.</p>
 
                     <div id="login-status" class="status-box" aria-live="polite"></div>
 
@@ -520,15 +520,15 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="field-label" for="password">Contrasena</label>
+                                <label class="field-label" for="password">Contraseña</label>
                                 <div class="input-wrap">
                                     <span class="input-icon"><i class="fa fa-lock"></i></span>
-                                    <input class="form-control auth-input" id="password" placeholder="Escribe tu contrasena" name="pass" type="password" value="" required autocomplete="current-password">
+                                    <input class="form-control auth-input" id="password" placeholder="Escribe tu contraseña" name="pass" type="password" value="" required autocomplete="current-password">
                                 </div>
                             </div>
 
                             <div class="auth-actions">
-                                <a class="auth-link" href="#" id="forgot-password-link">Olvide mi contrasena</a>
+                                <a class="auth-link" href="#" id="forgot-password-link">Olvide mi contraseña</a>
                                 <p class="auth-hint">Tu acceso se valida con reCAPTCHA antes de entrar.</p>
                             </div>
 
@@ -545,7 +545,7 @@
                         </fieldset>
                     </form>
 
-                    <p class="auth-note">Si el acceso tarda un poco, no cierres la ventana. El sistema esta verificando tus datos y preparando el panel.</p>
+                    <p class="auth-note">Si el acceso tarda un poco, no cierres la ventana. El sistema está verificando tus datos y preparando el panel.</p>
                     <div class="auth-subtle-actions">
                         <a href="<?=BASE_URL?>" class="auth-back-link">
                             <i class="fa fa-arrow-left"></i>
@@ -598,7 +598,7 @@
                 }
 
                 if (code === 'system') {
-                    return 'El correo o la contrasena no son correctos.';
+                    return 'El correo o la contraseña no son correctos.';
                 }
 
                 return 'No fue posible ingresar en este momento. Intenta nuevamente.';
@@ -606,7 +606,7 @@
 
             forgotPasswordLink.on('click', function(event) {
                 event.preventDefault();
-                setStatus('Para restablecer tu contrasena, por favor contacta al administrador del sistema.', 'info');
+                setStatus('Para restablecer tu contraseña, por favor contacta al administrador del sistema.', 'info');
             });
 
             form.on('submit', function(event) {
@@ -618,7 +618,7 @@
                 clearStatus();
 
                 if (!clave || !passw) {
-                    setStatus('Necesitas capturar tu correo institucional y tu contrasena.', 'error');
+                    setStatus('Necesitas capturar tu correo institucional y tu contraseña.', 'error');
                     return;
                 }
 
