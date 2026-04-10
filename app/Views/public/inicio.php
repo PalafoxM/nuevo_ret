@@ -1,6 +1,53 @@
+<style>
+  .home-hero-copy-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+  }
+
+  .home-admin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5f6f79;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(12, 79, 74, 0.12);
+    box-shadow: 0 8px 18px rgba(22, 50, 61, 0.06);
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .home-admin-link:hover,
+  .home-admin-link:focus {
+    color: #0b4f4a;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(12, 79, 74, 0.2);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 767px) {
+    .home-hero-copy-top {
+      justify-content: flex-start;
+      margin-bottom: 16px;
+    }
+  }
+</style>
+
 <main class="home-shell">
   <section class="home-hero container_ret">
     <div class="home-hero-copy">
+      <div class="home-hero-copy-top">
+        <a href="<?=BASE_URL?>panelauth" class="home-admin-link">
+          <i class="bi bi-shield-lock"></i>
+          Panel administrativo
+        </a>
+      </div>
+
       <span class="home-kicker">Registro Estatal de Turismo</span>
       <h1 class="home-title">Una entrada más clara, actual y poderosa para el RET.</h1>
       <p class="home-lead">Conecta a los prestadores de servicios turísticos con los beneficios, requisitos, herramientas y trámites del Registro Estatal de Turismo de Guanajuato en una experiencia visual más fresca y fácil de recorrer.</p>
