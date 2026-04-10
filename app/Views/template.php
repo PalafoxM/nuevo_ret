@@ -8,7 +8,6 @@ $this->session          = \Config\Services::session();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="ConecTI.mx">
     <meta name="description" content="Registro Estatal de Turismo - Gobierno del Estado de Guanajuato" />
     <meta name="abstract" content="Registro Estatal de Turismo - Gobierno del Estado de Guanajuato, la Grandeza de México" />
     <meta name="keywords" content="Registro Estatal de Turismo, Hotel, Restaurante, Guía Turístico, Pueblos Mágicos, Guanajuato, León, Salamanca, Celaya, Irapuato, Silao" />
@@ -18,6 +17,7 @@ $this->session          = \Config\Services::session();
     <meta property="og:image" content="https://guanajuato.gob.mx/imagesD/GTO-LOGOAsset.png" />
     <meta property="og:url" content="<?=BASE_URL?>" />
     <meta name="theme-color" content="#000f9f">
+    <meta name="developer" content="palafox.marin@hotmail.com">
 
     <title><?=$title?></title>
 
