@@ -24,7 +24,8 @@ class Usuario_model extends Model {
         $builder = $this->db->table('ret_usr');
 
         $data = array(
-           'pass' => password_hash($nueva, PASSWORD_DEFAULT)
+           'pass' => password_hash($nueva, PASSWORD_DEFAULT),
+           'activo' => 1,
         );
 
         $builder->where('email', $email);
