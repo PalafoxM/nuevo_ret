@@ -168,6 +168,7 @@ class Registro extends BaseController
 		$giro = $this->request->getVar('giro');
 		$municipio = $this->request->getVar('municipio');
 		$nombre_comercial = strtoupper(field_replace($this->request->getVar('nombre_comercial')));
+		$fecha_inicio_operacion = $this->request->getVar('fecha_inicio_operacion');
 		$acepta_avisos = $this->request->getVar('acepta_avisos');
 
 		$ip_visitante = $_SERVER['REMOTE_ADDR'];
@@ -177,6 +178,7 @@ class Registro extends BaseController
 			'giro' => 'required',
 			'municipio' => 'required',
 			'nombre_comercial' => 'required|min_length[3]|max_length[200]',
+			'fecha_inicio_operacion' => 'required|valid_date[Y-m-d]',
 			'acepta_avisos' => 'required',
 		]))
 		{
@@ -187,6 +189,7 @@ class Registro extends BaseController
 				'giro' => $giro,
 				'municipio' => $municipio,
 				'nombre_comercial' => $nombre_comercial,
+				'fecha_inicio_operacion' => $fecha_inicio_operacion,
 				'acepta_avisos' => $acepta_avisos,
 			];
 			$this->session->setFlashdata($alerta);
@@ -200,6 +203,7 @@ class Registro extends BaseController
 				'giro' => $giro,
 				'municipio' => $municipio,
 				'nombre_comercial' => $nombre_comercial,
+				'fecha_inicio_operacion' => $fecha_inicio_operacion,
 				'correo' => $this->session->get('email'),
 				'privacidad' => (($acepta_avisos == 'on') ? 1 : 0),
 				'ip_visitante' => $ip_visitante,

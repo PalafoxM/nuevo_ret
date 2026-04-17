@@ -3,6 +3,9 @@
 $this->session = \Config\Services::session();
 $alertType = $this->session->getFlashdata('alert_type') ?: 'info';
 $formErrors = $this->session->getFlashdata('errors');
+$modalTitle = $this->session->getFlashdata('modal_title');
+$modalMessage = $this->session->getFlashdata('modal_message');
+$modalIcon = $this->session->getFlashdata('modal_icon') ?: 'success';
 
 ?>
 
@@ -427,5 +430,17 @@ $formErrors = $this->session->getFlashdata('errors');
 
       overlay.hidden = false;
     });
+
+    <?php if($modalTitle && $modalMessage): ?>
+    if (window.Swal) {
+      Swal.fire({
+        icon: '<?=$modalIcon?>',
+        title: <?=json_encode($modalTitle)?>,
+        html: <?=json_encode($modalMessage)?>,
+        confirmButtonText: 'Continuar',
+        confirmButtonColor: '#1565c0',
+      });
+    }
+    <?php endif; ?>
   });
 </script>

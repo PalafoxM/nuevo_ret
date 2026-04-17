@@ -362,6 +362,9 @@ class Usuario_model extends Model {
                 'titulo'        =>  'Credenciales enviadas',
                 'mensaje'       =>  'Tu acceso RET fue creado correctamente y las credenciales se enviaron al correo registrado.',
                 'alert_type'    =>  'success',
+                'modal_title'   =>  'Listo',
+                'modal_message' =>  'Tu acceso RET fue creado correctamente. Revisa el correo que ingresaste: '.$array_data['correo'].', ahi te enviamos tus credenciales para continuar.',
+                'modal_icon'    =>  'success',
             ]);
         else
             $session->setFlashdata([

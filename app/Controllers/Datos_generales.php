@@ -14,6 +14,7 @@ class Datos_generales extends BaseController {
 			$data['head_js']			=	array(
 												BASE_URL.STATIC_JS.'jquery.min-3.3.1.js',
 												BASE_URL.STATIC_JS.'bootstrap.bundle.min.5.1.0.js',
+												'https://cdn.jsdelivr.net/npm/sweetalert2@11',
 											);
 			$data['head_css']			=	array(
 												BASE_URL.STATIC_CSS.'bootstrap.min.5.1.0.css',

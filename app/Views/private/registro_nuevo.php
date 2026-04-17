@@ -102,6 +102,12 @@ $demo_mode = isset($demo_mode) ? (bool) $demo_mode : false;
               <div class="invalid-feedback">Campo requerido.</div>
             </div>
 
+            <div class="ret-field">
+              <label for="fecha_inicio_operacion" class="form-label">Fecha de inicio de operacion y/o apertura del establecimiento</label>
+              <input type="date" class="form-control" id="fecha_inicio_operacion" name="fecha_inicio_operacion" value="<?=$this->session->getFlashdata('fecha_inicio_operacion')?>" required <?=$demo_mode ? 'disabled' : ''?>>
+              <div class="invalid-feedback">Favor de capturar la fecha de inicio de operacion y/o apertura del establecimiento.</div>
+            </div>
+
             <div class="ret-field ret-field-full">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" name="email" value="<?=$this->session->get('email')?>" disabled>
