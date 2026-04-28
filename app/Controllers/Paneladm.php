@@ -877,7 +877,7 @@ class Paneladm extends BaseController {
 			        <br><br><span><b>Atiende las observaciones siguiendo el manual de usuario:</b></span><br/>
 			        <span><a href="'.BASE_URL.'manual-ret" target="_blank">'.BASE_URL.'manual-ret</a></span><br/><br/>
 			        Contarás con 3 días a partir de esta fecha para realizar las modificaciones solicitadas para concluir tu trámite. <br> 
-					Cualquier duda o aclaración con respecto a tu trámite, favor de comunicarte al teléfono (472) 103 99 00 ext. 229 <br><br>
+					Cualquier duda o aclaración con respecto a tu trámite, favor de comunicarte al teléfono (472) 103 9900 EXT 158 y 160 <br><br>
 					<strong> ATENTAMENTE <br><br>
 					Registro Estatal de Turismo <br>
 					Secretaría de Turismo del Estado de Guanajuato </strong>';
@@ -918,7 +918,7 @@ class Paneladm extends BaseController {
 			                        <span><b>Inicia sesión en este enlace:</b></span><br/>
 			                        <span><a href="'.BASE_URL.'ingresar" target="_blank">'.BASE_URL.'ingresar</a></span><br/><br/>
 			                        <span>Recuerda, ¡te estaremos esperando!</span><br/><br/>
-			                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 99 00 ext. 229 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
+			                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 9900 EXT 158 y 160 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
 			                    </div>';
 
 			        send_email('Su contraseña ha sido reestablecida', $this->usuario_model->get($_clave, 'email'), $mensaje);
@@ -1061,7 +1061,7 @@ class Paneladm extends BaseController {
 			                        <span><b>Inicia sesión en este enlace:</b></span><br/>
 			                        <span><a href="'.BASE_URL.'ingresar" target="_blank">'.BASE_URL.'ingresar</a></span><br/><br/>
 			                        <span>Recuerda, ¡te estaremos esperando!</span><br/><br/>
-			                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 99 00 ext. 229 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
+			                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 9900 EXT 158 y 160 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
 			                    </div>';
 
 			        send_email('Renovación de su registro y su acceso ha sido reestablecido', $this->usuario_model->get($_clave, 'email'), $mensaje);
@@ -1126,7 +1126,7 @@ class Paneladm extends BaseController {
 			                        <span>-Constancia de Situación Fiscal reciente</span><br/>
 			                        <span>-Comprobante de domicilio reciente </span><br/>
 			                        <span>-Contrato de arrendamiento vigente (si aplica el caso)</span><br/><br/>
-			                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 99 00 ext. 229 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
+			                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 9900 EXT 158 y 160 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
 			                    </div>';
 
 			        send_email('Trámite RET vence en 30 días', $this->usuario_model->get($pv30['clave'], 'email'), $mensaje);
@@ -1159,7 +1159,7 @@ class Paneladm extends BaseController {
 			                        <span>-Constancia de Situación Fiscal reciente</span><br/>
 			                        <span>-Comprobante de domicilio reciente </span><br/>
 			                        <span>-Contrato de arrendamiento vigente (si aplica el caso)</span><br/><br/>
-			                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 99 00 ext. 229 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
+			                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 9900 EXT 158 y 160 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
 			                    </div>';
 
 			        send_email('Trámite RET vence en 15 días', $this->usuario_model->get($pv15['clave'], 'email'), $mensaje);

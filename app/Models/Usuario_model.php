@@ -352,7 +352,7 @@ class Usuario_model extends Model {
                         <span><b>Inicia sesión en este enlace:</b></span><br/>
                         <span><a href="'.BASE_URL.'ingresar" target="_blank">'.BASE_URL.'ingresar</a></span><br/><br/>
                         <span>Recuerda, ¡te estaremos esperando!</span><br/><br/>
-                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 99 00 ext. 229 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
+                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 9900 EXT 158 y 160 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
                     </div>';
 
         $email_enviado = send_email('Acceso a la Plataforma', $array_data['correo'], $mensaje);
@@ -436,7 +436,7 @@ class Usuario_model extends Model {
                         <span><b>7. Logotipo e Imágenes.</b></span><br/>
                         <span><b>8. Protocolo de Higiene <span style="color:#0000ff">(Aplica únicamente a Hospedaje de Plataformas Digitales)</span> *Ejemplo: Distintivo Guanajuato Sano, (secuencia de pasos a seguir en la higiene del establecimiento).</b></span><br/>
                         <span><b>Recuerda, ¡te estaremos esperando!</b></span><br/><br/>
-                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 99 00 ext. 229 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
+                        <span><b>Cualquier duda comunicarse a la Secretaría de Turismo del Estado de Guanajuato al teléfono (472) 103 9900 EXT 158 y 160 o al correo electrónico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
                     </div>';
 
         return send_email('Validación de correo electrónico', $email, $mensaje, '');

@@ -3322,7 +3322,7 @@
 
 											<div class="leyenda inputforma" style="color: blue; text-align: justify">
 												Contarás con <strong> 3 días </strong> a partir de esta fecha para realizar las modificaciones solicitadas para concluir tu trámite. <br> 
-												Cualquier duda o aclaración con respecto a su trámite, favor de comunicarte al teléfono (472) 103 99 00 ext. 229 <br><br>
+												Cualquier duda o aclaración con respecto a su trámite, favor de comunicarte al teléfono (472) 103 9900 EXT 158 y 160 <br><br>
 
 												<strong> ATENTAMENTE <br>
 												Registro Estatal de Turismo <br>

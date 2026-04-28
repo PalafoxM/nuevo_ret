@@ -315,7 +315,7 @@ class Ingresar extends BaseController {
 						<span><b>Inicia sesion en este enlace:</b></span><br/>
 						<span><a href="'.BASE_URL.'ingresar" target="_blank">'.BASE_URL.'ingresar</a></span><br/><br/>
 						<span>Te recomendamos cambiar tu contrasena una vez que ingreses a la plataforma.</span><br/><br/>
-						<span><b>Cualquier duda comunicarse a la Secretaria de Turismo del Estado de Guanajuato al telefono (472) 103 99 00 ext. 229 o al correo electronico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
+						<span><b>Cualquier duda comunicarse a la Secretaria de Turismo del Estado de Guanajuato al telefono (472) 103 9900 EXT 158 y 160 o al correo electronico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
 					</div>';
 
 		$enviado = send_email('Restablecimiento de acceso RET', $email, $mensaje);
