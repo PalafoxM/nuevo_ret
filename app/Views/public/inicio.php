@@ -195,9 +195,12 @@
     </div>
 
     <div class="home-links-grid">
-      <a href="https://drive.google.com/file/d/1Oh7TTrMF_icPM9jTg6NVm8EavWekl97h/view?usp=sharing" target="_blank" class="home-link-card home-link-1">
+      <a href="https://portal.fgeguanajuato.gob.mx/PortalWebEstatal/ProtocoloAlba/Home.aspx" target="_blank" class="home-link-card home-link-1">
         <span>Protocolo Alba</span>
       </a>
+     <!--  <a href="https://drive.google.com/file/d/1Oh7TTrMF_icPM9jTg6NVm8EavWekl97h/view?usp=sharing" target="_blank" class="home-link-card home-link-1">
+        <span>Protocolo Alba</span>
+      </a> -->
       <a href="<?=BASE_URL?>secturgto" target="_blank" class="home-link-card home-link-2">
         <span>SECTUR Guanajuato</span>
       </a>
