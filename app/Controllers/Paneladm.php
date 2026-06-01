@@ -1624,7 +1624,7 @@ class Paneladm extends BaseController {
 												'concluido'		=>	1, 
 												'aprobado'		=>	1, 
 												'giro <>'		=>	0, 
-												'municipio <>'	=>	0], true, [], 'giro ASC', 'DATE_ADD( dg_fecha_registro, INTERVAL 3 YEAR ) >= NOW()', true);
+												'municipio <>'	=>	0], true, [], 'giro ASC', '', true);
 
 					foreach($data as $key 	=>	$value)
 					{
