@@ -339,4 +339,108 @@ class Ingresar extends BaseController {
 			'message' => 'Te enviamos una nueva contrasena al correo registrado.',
 		]);
 	}
+
+	public function restablecer_password_otro_correo()
+	{
+		$emailAnterior = strtolower(trim((string) $this->request->getVar('email_old')));
+		$emailNuevo = strtolower(trim((string) $this->request->getVar('email_new')));
+
+		if (! $this->request->isAJAX())
+			return redirect()->to('ingresar');
+
+		if (! $this->validate([
+			'email_old' => 'required|valid_email',
+			'email_new' => 'required|valid_email',
+		]))
+		{
+			return $this->respond([
+				'success' => false,
+				'level' => 'validation',
+				'message' => 'Captura ambos correos con un formato valido.',
+			], 422);
+		}
+
+		if ($emailAnterior === $emailNuevo)
+		{
+			return $this->respond([
+				'success' => false,
+				'level' => 'validation',
+				'message' => 'El nuevo correo debe ser diferente al correo anterior.',
+			], 422);
+		}
+
+		$usuario = $this->usuario_model ? $this->usuario_model->get_list_by_email($emailAnterior) : false;
+
+		if (! $usuario || ! isset($usuario[0]['clave']))
+		{
+			return $this->respond([
+				'success' => false,
+				'level' => 'notfound',
+				'message' => 'Ese correo anterior no se encuentra en la base de datos.',
+			], 404);
+		}
+
+		$correoNuevoRegistrado = $this->usuario_model ? $this->usuario_model->get_list_by_email($emailNuevo) : false;
+		if ($correoNuevoRegistrado && isset($correoNuevoRegistrado[0]['clave']) && $correoNuevoRegistrado[0]['clave'] !== $usuario[0]['clave'])
+		{
+			return $this->respond([
+				'success' => false,
+				'level' => 'exists',
+				'message' => 'El nuevo correo ya esta asignado a otro registro.',
+			], 409);
+		}
+
+		$nuevaPassword = password_generator();
+		$clave = $usuario[0]['clave'];
+		$nombre = $usuario[0]['nombre_comercial'] ?? $clave;
+
+		$actualizado = $this->usuario_model->cambiar_password_y_correo($emailAnterior, $emailNuevo, $nuevaPassword);
+
+		if (! $actualizado)
+		{
+			return $this->respond([
+				'success' => false,
+				'level' => 'error',
+				'message' => 'No fue posible actualizar el correo y la contrasena. Intenta nuevamente.',
+			], 500);
+		}
+
+		$mensaje = '<div>
+						<img src="'.BASE_URL.'static/images/logo_ret_azul.png" />
+						<h2>Restablecimiento de acceso RET</h2>
+						<span>Estimado '.$nombre.', hemos actualizado tu correo de acceso y generado una nueva contrasena temporal.</span><br/><br/>
+						<span><b>Usuario:</b></span><br/>
+						<span>'.$clave.'</span><br/>
+						<span><b>Nuevo correo registrado:</b></span><br/>
+						<span>'.$emailNuevo.'</span><br/>
+						<span><b>Contrasena temporal:</b></span><br/>
+						<span>'.$nuevaPassword.'</span><br/><br/>
+						<span><b>Inicia sesion en este enlace:</b></span><br/>
+						<span><a href="'.BASE_URL.'ingresar" target="_blank">'.BASE_URL.'ingresar</a></span><br/><br/>
+						<span>Te recomendamos cambiar tu contrasena una vez que ingreses a la plataforma.</span><br/><br/>
+						<span><b>Cualquier duda comunicarse a la Secretaria de Turismo del Estado de Guanajuato al telefono (472) 103 9900 EXT 158 y 160 o al correo electronico </b></span><a href="mailto:ret@guanajuato.gob.mx" target="_blank">ret@guanajuato.gob.mx</a><br/><br/>
+					</div>';
+
+		$enviado = send_email('Restablecimiento de acceso RET', $emailNuevo, $mensaje);
+
+		if (! $enviado)
+		{
+			return $this->respond([
+				'success' => false,
+				'level' => 'mail_error',
+				'message' => 'La contrasena fue restablecida y el correo fue actualizado, pero no se pudo enviar el mensaje al nuevo correo en este momento.',
+				'credentials' => [
+					'usuario' => $clave,
+					'contrasena' => $nuevaPassword,
+					'correo' => $emailNuevo,
+				],
+			], 200);
+		}
+
+		return $this->respond([
+			'success' => true,
+			'level' => 'success',
+			'message' => 'Actualizamos tu correo de acceso y enviamos la nueva contrasena a '.$emailNuevo.'.',
+		]);
+	}
 }

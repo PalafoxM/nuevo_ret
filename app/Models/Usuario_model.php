@@ -34,6 +34,22 @@ class Usuario_model extends Model {
         return ($this->db->affectedRows() >= 0);
     }
 
+    function cambiar_password_y_correo($emailAnterior, $emailNuevo, $nueva)
+    {
+        $builder = $this->db->table('ret_usr');
+
+        $data = array(
+           'email' => $emailNuevo,
+           'pass' => password_hash($nueva, PASSWORD_DEFAULT),
+           'activo' => 1,
+        );
+
+        $builder->where('email', $emailAnterior);
+        $builder->update($data);
+
+        return ($this->db->affectedRows() >= 0);
+    }
+
     function get($usuario, $campo, $tabla = 'vw_usr_datos', $id = 'id', $result = false, $array_where = [])
     {
         $builder = $this->db->table($tabla);

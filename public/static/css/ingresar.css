@@ -702,6 +702,13 @@ Version:  2.0
   line-height: 1.5;
 }
 
+.signin-recovery-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+}
+
 .signin-text-action {
   display: inline-flex;
   align-items: center;
@@ -719,10 +726,21 @@ Version:  2.0
   white-space: nowrap;
 }
 
+.signin-text-action-alt {
+  background: linear-gradient(135deg, #0f57a8 0%, #0b4280 100%);
+  box-shadow: 0 14px 28px rgba(15, 87, 168, 0.18);
+}
+
 .signin-text-action:hover,
 .signin-text-action:focus {
   color: #fff;
   background: linear-gradient(135deg, #f27d00 0%, #e45e00 100%);
+}
+
+.signin-text-action-alt:hover,
+.signin-text-action-alt:focus {
+  color: #fff;
+  background: linear-gradient(135deg, #0c4b93 0%, #08376b 100%);
 }
 
 .signin-secondary-link {

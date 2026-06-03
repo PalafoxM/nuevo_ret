@@ -114,6 +114,7 @@ $routes->post('pre-registro', 'Registro::recaptcha');
 $routes->post('registro-guardar', 'Registro::guardar');
 $routes->post('sesion', 'Ingresar::recaptcha');
 $routes->post('restablecer-password', 'Ingresar::restablecer_password');
+$routes->post('restablecer-password-otro-correo', 'Ingresar::restablecer_password_otro_correo');
 $routes->post('actualizar-contrasena', 'Contrasena::actualizar');
 $routes->post('guardar-form', 'Guardar_form');
 $routes->get('cambiar-contrasena', 'Contrasena');
