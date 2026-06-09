@@ -610,7 +610,7 @@ class Paneladm extends BaseController {
 										'info_rfc'				=>		'required|min_length[9]|max_length[13]',
 										'tipo_persona'			=>		'required',
 										'razon_social'			=>		'required|min_length[3]|max_length[255]',
-										'representante_moral'	=>		'required|min_length[0]|max_length[60]',
+										'representante_moral'	=>		'permit_empty|max_length[60]',
 										'municipio'				=>		'required',
 										'telefono'				=>		'required|min_length[3]|max_length[200]',
 										'correo'				=>		'required|valid_email|min_length[6]|max_length[120]',
@@ -636,6 +636,9 @@ class Paneladm extends BaseController {
 										'imagen3'				=>		'uploaded[imagen3]|max_size[imagen3,10240]|ext_in[imagen3,jpeg,jpg,png]|mime_in[imagen3,image/jpeg,image/pjpeg,image/png,image/x-png]|max_dims[imagen3,5000,5000]|is_image[imagen3]',
 										'imagen_promocional'	=>		'uploaded[imagen_promocional]|max_size[imagen_promocional,10240]|ext_in[imagen_promocional,jpeg,jpg,png]|mime_in[imagen_promocional,image/jpeg,image/pjpeg,image/png,image/x-png]|max_dims[imagen_promocional,5000,5000]|is_image[imagen_promocional]',
 									];
+
+			if((string) $tipo_persona === '2')
+				$validate['representante_moral'] = 'required|max_length[60]';
 			
 			foreach($files as $file)
 			{
