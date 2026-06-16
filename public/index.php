@@ -6,6 +6,11 @@ define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
 // Ensure the current directory is pointing to the front controller's directory
 chdir(FCPATH);
 
+@ini_set('expose_php', '0');
+if (function_exists('header_remove')) {
+    @header_remove('X-Powered-By');
+}
+
 /*
  *---------------------------------------------------------------
  * BOOTSTRAP THE APPLICATION

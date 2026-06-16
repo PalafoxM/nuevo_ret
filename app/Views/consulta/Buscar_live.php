@@ -111,7 +111,7 @@
             <p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds</p>
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
         <!-- start (JS code) -->
         <script type="text/javascript">

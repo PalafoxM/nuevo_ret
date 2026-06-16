@@ -1,6 +1,22 @@
 # Disable directory browsing
 Options All -Indexes
 
+<IfModule mod_headers.c>
+	Header always unset X-Powered-By
+	Header always set X-Frame-Options "SAMEORIGIN"
+	Header always set X-Content-Type-Options "nosniff"
+	Header always set Referrer-Policy "strict-origin-when-cross-origin"
+	Header always set Permissions-Policy "accelerometer=(), autoplay=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+	Header always set X-Permitted-Cross-Domain-Policies "none"
+	Header always set X-XSS-Protection "0"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	RewriteRule "(^|/)\.(?!well-known/)" - [F]
+	RewriteRule ^(?:app|system|tests|writable|vendor)(?:/|$) - [F,NC]
+	RewriteRule ^(?:composer\.(?:json|lock)|phpunit\.xml(?:\.dist)?|env|\.env) - [F,NC]
+</IfModule>
+
 # ----------------------------------------------------------------------
 # Rewrite engine
 # ----------------------------------------------------------------------

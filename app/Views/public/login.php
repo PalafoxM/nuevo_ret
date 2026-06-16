@@ -38,11 +38,11 @@
 
         <form id="login_form" class="signin-form" action="<?=BASE_URL?>sesion" method="post">
           <div class="form-floating">
-            <input type="text" class="form-control" id="clave" name="clave" placeholder="Usuario" required>
+            <input type="text" class="form-control" id="clave" name="clave" placeholder="Usuario" required autocomplete="username" autocapitalize="none" spellcheck="false">
             <label for="clave">Usuario</label>
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="pass" name="pass" placeholder="Contrasena" required>
+            <input type="password" class="form-control" id="pass" name="pass" placeholder="Contrasena" required autocomplete="current-password" spellcheck="false">
             <label for="pass">Contrasena</label>
           </div>
 
@@ -77,6 +77,15 @@
 </main>
 
 <script>
+  function escapeHtml(value) {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
   $('#forgot_password_trigger').on('click', function() {
     Swal.fire({
       title: 'Restablecer contrasena',
@@ -122,10 +131,12 @@
       }
 
       if (result.value.level === 'mail_error' && result.value.credentials) {
+        var usuario = escapeHtml(result.value.credentials.usuario);
+        var contrasena = escapeHtml(result.value.credentials.contrasena);
         Swal.fire({
           icon: 'warning',
           title: 'Correo no disponible',
-          html: 'La contrasena fue restablecida, pero no se pudo enviar el correo.<br><br><strong style="color:#198754;">Usuario:</strong> <strong style="color:#198754;">' + result.value.credentials.usuario + '</strong><br><strong style="color:#198754;">Contrasena:</strong> <strong style="color:#198754;">' + result.value.credentials.contrasena + '</strong>'
+          html: 'La contrasena fue restablecida, pero no se pudo enviar el correo.<br><br><strong style="color:#198754;">Usuario:</strong> <strong style="color:#198754;">' + usuario + '</strong><br><strong style="color:#198754;">Contrasena:</strong> <strong style="color:#198754;">' + contrasena + '</strong>'
         });
         return;
       }
@@ -190,10 +201,13 @@
       }
 
       if (result.value.level === 'mail_error' && result.value.credentials) {
+        var usuario = escapeHtml(result.value.credentials.usuario);
+        var correo = escapeHtml(result.value.credentials.correo);
+        var contrasena = escapeHtml(result.value.credentials.contrasena);
         Swal.fire({
           icon: 'warning',
           title: 'Correo no disponible',
-          html: 'Actualizamos el correo y restablecimos la contrasena, pero no se pudo enviar el mensaje.<br><br><strong style="color:#198754;">Usuario:</strong> <strong style="color:#198754;">' + result.value.credentials.usuario + '</strong><br><strong style="color:#198754;">Correo:</strong> <strong style="color:#198754;">' + result.value.credentials.correo + '</strong><br><strong style="color:#198754;">Contrasena:</strong> <strong style="color:#198754;">' + result.value.credentials.contrasena + '</strong>'
+          html: 'Actualizamos el correo y restablecimos la contrasena, pero no se pudo enviar el mensaje.<br><br><strong style="color:#198754;">Usuario:</strong> <strong style="color:#198754;">' + usuario + '</strong><br><strong style="color:#198754;">Correo:</strong> <strong style="color:#198754;">' + correo + '</strong><br><strong style="color:#198754;">Contrasena:</strong> <strong style="color:#198754;">' + contrasena + '</strong>'
         });
         return;
       }
@@ -215,7 +229,13 @@
 
     grecaptcha.ready(function() {
       grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'submit'}).then(function(token) {
-        $('#login_form').prepend('<input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="' + token + '">');
+        $('#g-recaptcha-response').remove();
+        $('<input>', {
+          type: 'hidden',
+          name: 'g-recaptcha-response',
+          id: 'g-recaptcha-response',
+          value: token
+        }).appendTo('#login_form');
         $.post('sesion', {clave: clave, pass: passw, token: token}, function(result) {
           if (result.success) {
             window.setTimeout(function() { window.location = '<?php echo BASE_URL; ?>ingresar'; }, 5);

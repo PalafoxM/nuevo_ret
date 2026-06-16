@@ -22,11 +22,11 @@ $this->session          = \Config\Services::session();
     <div class="text-center container contenedor-ret">
       <div class="col-lg-12">
         <h4 class="mb-3">Para brindar mayor seguridad, favor de actualizar tu contraseña. Al finalizar, deberás iniciar sesión nuevamente.</h4>
-        <form action="<?=BASE_URL?>actualizar-contrasena" method="post" class="needs-validation" novalidate>
+        <form action="<?=BASE_URL?>actualizar-contrasena" method="post" class="needs-validation" novalidate autocomplete="off">
 
             <div class="col-12">
               <label for="keypass_new" class="form-label">Contraseña Nueva</label>
-              <input type="password" class="form-control" id="keypass_new" name="keypass_new" value="<?php=$this->session->getFlashdata('keypass_new')?>" placeholder="Contraseña Nueva" minlength="8" maxlength="15" required>
+              <input type="password" class="form-control" id="keypass_new" name="keypass_new" value="<?php=$this->session->getFlashdata('keypass_new')?>" placeholder="Contraseña Nueva" minlength="8" maxlength="15" required autocomplete="new-password" spellcheck="false">
               <div class="invalid-feedback">
                   Campo requerido. Debe tener al menos 8 caracteres.
               </div>
@@ -34,7 +34,7 @@ $this->session          = \Config\Services::session();
 
             <div class="col-12">
               <label for="keypass_rpt" class="form-label">Repetir Contraseña</label>
-              <input type="password" class="form-control" id="keypass_rpt" name="keypass_rpt" value="<?php=$this->session->getFlashdata('keypass_rpt')?>" placeholder="Repetir Contraseña" minlength="8" maxlength="15" required>
+              <input type="password" class="form-control" id="keypass_rpt" name="keypass_rpt" value="<?php=$this->session->getFlashdata('keypass_rpt')?>" placeholder="Repetir Contraseña" minlength="8" maxlength="15" required autocomplete="new-password" spellcheck="false">
               <div class="invalid-feedback">
                   Campo requerido. Debe tener al menos 8 caracteres. Las contraseñas deben coincidir.
                 </div>

@@ -77,7 +77,7 @@
             </ul>
 
     <div class=" navbar-brand navbar-right navbar-access-level">
-        <b>Bienvenido</b> <?=$name?>
+        <b>Bienvenido</b> <?=esc($name)?>
     </div>
             <!-- /.navbar-top-links -->
 
@@ -87,7 +87,7 @@
                 <div class="modal-content">
                     <div class="modal-header modal-blue">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Cambiar Contraseña (<?=$email?>)</h4>
+                        <h4 class="modal-title" id="myModalLabel">Cambiar Contraseña (<?=esc($email)?>)</h4>
                     </div>
                     <div class="modal-body">
                         <div class="row">
@@ -102,7 +102,7 @@
                                 <div class="form-group">
                                     <label>Current Password</label> &nbsp;&nbsp;
                                     <label class="error" id="error_currentPassword"> el campo es requerido.</label>
-                                    <input class="form-control" id="currentPassword" placeholder="Contraseña Actual" name="currentPassword" type="password" autofocus>
+                                    <input class="form-control" id="currentPassword" placeholder="Contraseña Actual" name="currentPassword" type="password" autocomplete="current-password" spellcheck="false" autofocus>
                                 </div> 
                             </div>
                         </div>
@@ -113,13 +113,13 @@
                                     <label>Nueva Contraseña</label> &nbsp;&nbsp;
                                     <label class="error" id="error_newPassword"> el campo es requerido.</label>
                                     <label class="error" id="error_newPassword2"> la contraseña no coincide</label>
-                                    <input class="form-control" id="newPassword" placeholder="Nueva Contraseña" name="newPassword" type="password" autofocus>
+                                    <input class="form-control" id="newPassword" placeholder="Nueva Contraseña" name="newPassword" type="password" autocomplete="new-password" spellcheck="false" autofocus>
                                 </div> 
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Confirmar Nueva Contraseña</label> &nbsp;&nbsp;
-                                    <input class="form-control" id="confirmNewPassword" placeholder="Confirma Nueva Contraseña" name="confirmNewPassword" type="password" autofocus>
+                                    <input class="form-control" id="confirmNewPassword" placeholder="Confirma Nueva Contraseña" name="confirmNewPassword" type="password" autocomplete="new-password" spellcheck="false" autofocus>
                                 </div> 
                             </div>
                       </div>
@@ -184,11 +184,8 @@
         </div>
         <!-- /#wrapper -->
 
-        <!-- jQuery 
-
-        <script src="<?=BASE_URL?>assets/js/jquery.min.js"></script>
-        <script type="text/javascript" src="<?=BASE_URL?>assets/js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>-->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <!-- jQuery -->
+    <script src="<?=BASE_URL?>assets/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?=BASE_URL?>assets/js/bootstrap.min.js"></script>

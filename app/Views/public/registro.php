@@ -42,14 +42,14 @@
           </div>
         <?php endif; ?>
 
-        <form id="signin_form" class="signup-form" action="<?=BASE_URL?>pre-registro" method="post" novalidate>
+        <form id="signin_form" class="signup-form" action="<?=BASE_URL?>pre-registro" method="post" novalidate autocomplete="off">
           <div class="form-floating">
-            <input type="email" class="form-control" id="email" name="email" minlength="6" maxlength="120" placeholder="Correo electronico" required>
+            <input type="email" class="form-control" id="email" name="email" minlength="6" maxlength="120" placeholder="Correo electronico" required autocomplete="email" autocapitalize="none" spellcheck="false">
             <label for="email">Correo electrónico</label>
           </div>
 
           <div class="form-floating">
-            <input type="email" class="form-control" id="repeat_email" name="repeat_email" minlength="6" maxlength="120" placeholder="Confirmar correo electrónico" required>
+            <input type="email" class="form-control" id="repeat_email" name="repeat_email" minlength="6" maxlength="120" placeholder="Confirmar correo electrónico" required autocomplete="email" autocapitalize="none" spellcheck="false">
             <label for="repeat_email">Confirmar correo electrónico</label>
           </div>
 

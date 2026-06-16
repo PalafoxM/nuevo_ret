@@ -573,7 +573,7 @@
                 statusBox
                     .removeClass('status-error status-info is-visible')
                     .addClass('is-visible status-' + type)
-                    .html(message);
+                    .text(message);
             }
 
             function clearStatus() {
@@ -652,4 +652,3 @@
 </body>
 
 </html>
-

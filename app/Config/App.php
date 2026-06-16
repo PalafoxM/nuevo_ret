@@ -18,14 +18,19 @@ class App extends BaseConfig
         $serverAddr = strtolower(trim($serverAddr, '[]'));
         $isLocalHost = in_array($serverHost, ['localhost', '127.0.0.1', '::1'], true)
             || in_array($serverAddr, ['127.0.0.1', '::1'], true)
-            || strpos($serverHost, 'localhost:')
-            || strpos($serverHost, '127.0.0.1:')
-            || strpos($serverHost, '[::1]')
-            || strpos($serverHost, '::1:');
+            || strpos($serverHost, 'localhost:') !== false
+            || strpos($serverHost, '127.0.0.1:') !== false
+            || strpos($serverHost, '[::1]') !== false
+            || strpos($serverHost, '::1:') !== false;
 
         if ($isLocalHost) {
             $this->sessionDriver = FileHandler::class;
             $this->sessionSavePath = WRITEPATH . 'session';
+            $this->forceGlobalSecureRequests = false;
+            $this->cookieSecure = false;
+        } else {
+            $this->forceGlobalSecureRequests = true;
+            $this->cookieSecure = true;
         }
     }
 
